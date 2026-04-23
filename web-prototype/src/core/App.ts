@@ -97,7 +97,7 @@ export class App {
     const isCalibrate = this.state.activeLevelIndex === -1;
     const levelIdx = this.state.activeLevelIndex;
     const level = isCalibrate ? { title: '标定', target: '请凝视中心光点', advice: '放松双眼 · 保持稳定注视' } : LEVEL_DETAILS[levelIdx];
-    const videoSrc = isCalibrate ? '/videos/calibrate.mp4' : `/videos/l${levelIdx + 1}.mp4`;
+    const videoSrc = isCalibrate ? 'videos/calibrate.mp4' : `videos/l${levelIdx + 1}.mp4`;
     const layoutClass = isCalibrate ? 'layout-calibrate' : `layout-l${levelIdx + 1}`;
 
     this.mainEl.innerHTML = `
@@ -146,7 +146,7 @@ export class App {
     this.mainEl.innerHTML = `<div class="about-container"><p style="opacity: 0.5;">Loading...</p></div>`;
     
     try {
-      const response = await fetch('/about.md');
+      const response = await fetch('about.md');
       const markdown = await response.text();
       const contentHtml = MarkdownRenderer.render(markdown);
 
@@ -182,7 +182,7 @@ export class App {
   private renderCalibrate(): void {
     this.mainEl.innerHTML = `
       <div class="view-container">
-        <div class="hero-banner" style="background-image: url('/banners/calibrate.png')">
+        <div class="hero-banner" style="background-image: url('banners/calibrate.png')">
           <div class="hero-overlay">
             <h2>标定关卡</h2>
             <p>与频率共鸣，找到稳定的凝视。</p>
@@ -191,7 +191,7 @@ export class App {
 
         <div class="action-card">
           <div class="action-info">
-            <div class="action-icon"><img src="/icons/calibrate.png" /></div>
+            <div class="action-icon"><img src="icons/calibrate.png" /></div>
             <div class="action-text">
               <h3>静心凝视，感受星轨的流动</h3>
               <p>在不追随、不抗拒中，让视线与星轨自然同频，建立内在的稳定中心。</p>
@@ -212,7 +212,7 @@ export class App {
   private renderHome(): void {
     this.mainEl.innerHTML = `
       <div class="view-container">
-        <div class="hero-banner" style="background-image: url('/banners/home.png')">
+        <div class="hero-banner" style="background-image: url('banners/home.png')">
           <div class="hero-overlay">
             <h2>欢迎回来</h2>
             <p>在宁静中训练专注，在专注中遇见更好的自己。</p>

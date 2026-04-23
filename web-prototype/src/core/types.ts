@@ -40,8 +40,8 @@ export const LEVEL_DETAILS = [
     advice: '呼吸 · 轻柔回到当下',
     duration: '10-15 分钟',
     status: '平稳',
-    banner: '/banners/l1.png',
-    icon: '/icons/l1.png'
+    banner: 'banners/l1.png',
+    icon: 'icons/l1.png'
   },
   {
     title: 'L2 雾林寻迹',
@@ -50,8 +50,8 @@ export const LEVEL_DETAILS = [
     advice: '保持稳定注视',
     duration: '15-20 分钟',
     status: '挑战',
-    banner: '/banners/l2.png',
-    icon: '/icons/l2.png'
+    banner: 'banners/l2.png',
+    icon: 'icons/l2.png'
   },
   {
     title: 'L3 星轨连心',
@@ -60,8 +60,8 @@ export const LEVEL_DETAILS = [
     advice: '让目光缓慢停留',
     duration: '12-18 分钟',
     status: '深邃',
-    banner: '/banners/l3.png',
-    icon: '/icons/l3.png'
+    banner: 'banners/l3.png',
+    icon: 'icons/l3.png'
   },
   {
     title: 'L4 真假萤火',
@@ -70,8 +70,8 @@ export const LEVEL_DETAILS = [
     advice: '追随暖色光点',
     duration: '10 分钟',
     status: '高阶',
-    banner: '/banners/l4.png',
-    icon: '/icons/l4.png'
+    banner: 'banners/l4.png',
+    icon: 'icons/l4.png'
   },
   {
     title: 'L5 飞燕破云',
@@ -80,8 +80,8 @@ export const LEVEL_DETAILS = [
     advice: '不追随闪电',
     duration: '20-30 分钟',
     status: '沉浸',
-    banner: '/banners/l5.png',
-    icon: '/icons/l5.png'
+    banner: 'banners/l5.png',
+    icon: 'icons/l5.png'
   },
   {
     title: 'L6 流星试炼',
@@ -90,8 +90,8 @@ export const LEVEL_DETAILS = [
     advice: '流星掠过也不偏移',
     duration: '5-10 分钟',
     status: '爆发',
-    banner: '/banners/l6.png',
-    icon: '/icons/l6.png'
+    banner: 'banners/l6.png',
+    icon: 'icons/l6.png'
   }
 ];
 
