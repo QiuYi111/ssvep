@@ -415,3 +415,165 @@ body {
   font-size: 0.8rem;
   color: var(--text-secondary);
 }
+
+/* About Page */
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 0 100px;
+}
+
+.about-header {
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--glass-border);
+  margin-bottom: 32px;
+}
+
+.breadcrumb {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  opacity: 0.6;
+}
+
+.about-hero {
+  width: 100%;
+  height: 320px;
+  border-radius: 24px;
+  background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.8) 100%), url('/banners/l1.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  padding: 48px;
+  margin-bottom: 60px;
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 12px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+.hero-content .subtitle {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 24px;
+  max-width: 600px;
+  line-height: 1.4;
+}
+
+.meta-info {
+  display: flex;
+  gap: 32px;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.about-body {
+  display: flex;
+  flex-direction: column;
+  gap: 64px;
+}
+
+.about-section {
+  position: relative;
+}
+
+.about-section h2 {
+  font-size: 1.35rem;
+  color: var(--accent-gold);
+  margin: 48px 0 24px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.about-section h2::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 1.35rem;
+  background: var(--accent-gold);
+  border-radius: 2px;
+  margin-right: 4px;
+}
+
+.about-section p {
+  line-height: 2;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.05rem;
+  margin-bottom: 24px;
+  text-align: justify;
+}
+
+.about-section p:last-child {
+  margin-bottom: 0;
+}
+
+.about-link {
+  color: var(--accent-gold);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(212, 160, 23, 0.2);
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  margin-left: 4px;
+  padding-bottom: 1px;
+}
+
+.about-link:hover {
+  border-bottom-color: var(--accent-gold);
+  background: rgba(212, 160, 23, 0.05);
+}
+
+.about-divider {
+  height: 1px;
+  background: linear-gradient(90deg, var(--glass-border) 0%, transparent 100%);
+  margin: 48px 0;
+}
+
+/* Custom Gold Scrollbar */
+#main-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+#main-content::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+#main-content::-webkit-scrollbar-thumb {
+  background: rgba(212, 160, 23, 0.3);
+  border-radius: 10px;
+}
+
+#main-content::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 160, 23, 0.5);
+}
+
+.about-section h2 {
+  border-left: 4px solid var(--accent-gold);
+  padding-left: 16px;
+}
+
+.about-section h2::before {
+  display: none; /* Removed the previous attempt */
+}
+
+.about-divider {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.1) 0%, transparent 100%);
+  margin: 60px 0;
+}
+
+.about-link {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}

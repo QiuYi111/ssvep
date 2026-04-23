@@ -1,6 +1,7 @@
 import { defaultState, LEVEL_DETAILS } from './types';
 import type { AppState } from './types';
 import { safeDt } from './Timing';
+import { MarkdownRenderer } from '../utils/MarkdownRenderer';
 
 export class App {
   private state: AppState;
@@ -72,6 +73,7 @@ export class App {
         const textNode = i.childNodes[i.childNodes.length - 1];
         if (textNode.nodeType === Node.TEXT_NODE) {
            if (i.dataset.view === 'calibrate') textNode.textContent = ' 标定';
+           else if (i.dataset.view === 'about') textNode.textContent = ' 关于';
            else if (i.dataset.level !== undefined) textNode.textContent = ` ${LEVEL_DETAILS[parseInt(i.dataset.level)].title}`;
            else if (i.dataset.view === 'home') textNode.textContent = ' 首页';
         }
@@ -84,6 +86,8 @@ export class App {
       this.renderCalibrate();
     } else if (this.state.currentView === 'level-detail') {
       this.renderLevelDetail(this.state.selectedLevelIndex);
+    } else if (this.state.currentView === 'about') {
+      this.renderAbout();
     } else if (this.state.currentView === 'training') {
       this.renderTraining();
     }
@@ -136,6 +140,43 @@ export class App {
     this.lastTime = performance.now();
     if (this.animId) cancelAnimationFrame(this.animId);
     this.tick(this.lastTime);
+  }
+
+  private async renderAbout(): Promise<void> {
+    this.mainEl.innerHTML = `<div class="about-container"><p style="opacity: 0.5;">Loading...</p></div>`;
+    
+    try {
+      const response = await fetch('/about.md');
+      const markdown = await response.text();
+      const contentHtml = MarkdownRenderer.render(markdown);
+
+      this.mainEl.innerHTML = `
+        <div class="about-container">
+          <div class="about-header">
+            <div class="breadcrumb">ⓘ About</div>
+          </div>
+          
+          <div class="about-hero">
+            <div class="hero-content">
+              <h1>关于本系统</h1>
+              <p class="subtitle">从 SSVEP 到场景化注意力训练：我们为什么这样设计本系统</p>
+              <div class="meta-info">
+                <span>⚛︎ 研究性博客</span>
+                <span>☉ v0.1</span>
+                <span>⊞ Demo</span>
+                <span>🕒 更新于 2026</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-body">
+            ${contentHtml}
+          </div>
+        </div>
+      `;
+    } catch (err) {
+      this.mainEl.innerHTML = `<div class="about-container"><p>Failed to load about.md</p></div>`;
+    }
   }
 
   private renderCalibrate(): void {
