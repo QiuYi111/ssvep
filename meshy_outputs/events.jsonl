@@ -1,0 +1,18 @@
+{"event": "submitted", "folder": "L1/lotus-close", "key": "L1__lotus-close", "task_id": "019db904-2304-78ba-90a3-7308bfa2662b"}
+{"event": "polled", "key": "L1__lotus-close", "progress": 7, "status": "IN_PROGRESS", "task_id": "019db904-2304-78ba-90a3-7308bfa2662b"}
+{"event": "polled", "key": "L1__lotus-close", "progress": 15, "status": "IN_PROGRESS", "task_id": "019db904-2304-78ba-90a3-7308bfa2662b"}
+{"event": "polled", "key": "L1__lotus-close", "progress": 22, "status": "IN_PROGRESS", "task_id": "019db904-2304-78ba-90a3-7308bfa2662b"}
+{"event": "polled", "key": "L1__lotus-close", "progress": 27, "status": "IN_PROGRESS", "task_id": "019db904-2304-78ba-90a3-7308bfa2662b"}
+{"event": "polled", "key": "L1__lotus-close", "progress": 27, "status": "IN_PROGRESS", "task_id": "019db904-2304-78ba-90a3-7308bfa2662b"}
+{"event": "polled", "key": "L1__lotus-close", "progress": 27, "status": "IN_PROGRESS", "task_id": "019db904-2304-78ba-90a3-7308bfa2662b"}
+{"event": "polled", "key": "L1__lotus-close", "progress": 27, "status": "IN_PROGRESS", "task_id": "019db904-2304-78ba-90a3-7308bfa2662b"}
+{"event": "polled", "key": "L1__lotus-close", "progress": 42, "status": "IN_PROGRESS", "task_id": "019db904-2304-78ba-90a3-7308bfa2662b"}
+{"event": "polled", "key": "L1__lotus-close", "progress": 42, "status": "IN_PROGRESS", "task_id": "019db904-2304-78ba-90a3-7308bfa2662b"}
+{"event": "polled", "key": "L1__lotus-close", "progress": 49, "status": "IN_PROGRESS", "task_id": "019db904-2304-78ba-90a3-7308bfa2662b"}
+{"event": "polled", "key": "L1__lotus-close", "progress": 49, "status": "IN_PROGRESS", "task_id": "019db904-2304-78ba-90a3-7308bfa2662b"}
+{"event": "polled", "key": "L1__lotus-close", "progress": 51, "status": "IN_PROGRESS", "task_id": "019db904-2304-78ba-90a3-7308bfa2662b"}
+{"event": "polled", "key": "L1__lotus-close", "progress": 51, "status": "IN_PROGRESS", "task_id": "019db904-2304-78ba-90a3-7308bfa2662b"}
+{"event": "polled", "key": "L1__lotus-close", "progress": 51, "status": "IN_PROGRESS", "task_id": "019db904-2304-78ba-90a3-7308bfa2662b"}
+{"event": "polled", "key": "L1__lotus-close", "progress": 99, "status": "IN_PROGRESS", "task_id": "019db904-2304-78ba-90a3-7308bfa2662b"}
+{"event": "polled", "key": "L1__lotus-close", "progress": 99, "status": "IN_PROGRESS", "task_id": "019db904-2304-78ba-90a3-7308bfa2662b"}
+{"event": "polled", "key": "L1__lotus-close", "progress": 100, "status": "SUCCEEDED", "task_id": "019db904-2304-78ba-90a3-7308bfa2662b"}

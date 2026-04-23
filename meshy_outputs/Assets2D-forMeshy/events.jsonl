@@ -1,0 +1,60 @@
+{"event": "submitted", "folder": "L1/粉莲四朵", "key": "L1__粉莲四朵", "task_id": "019db916-2e97-7c5b-b9f0-8df493f30114"}
+{"event": "submitted", "folder": "L1/花瓣", "key": "L1__花瓣", "task_id": "019db916-44ef-7c5c-b038-e01acf7d83b5"}
+{"event": "submitted", "folder": "L2/古碑苔痕", "key": "L2__古碑苔痕", "task_id": "019db916-56fa-72b4-b28c-ea15f48e022f"}
+{"event": "submitted", "folder": "L2/枯木", "key": "L2__枯木", "task_id": "019db916-6de0-7aa9-a6fd-e1fec6e99b67"}
+{"event": "submitted", "folder": "L2/萤火虫", "key": "L2__萤火虫", "task_id": "019db916-88b2-7c62-ae86-deb3375218f2"}
+{"event": "submitted", "folder": "L3/幻鹿三景", "key": "L3__幻鹿三景", "task_id": "019db917-f066-7c9c-b6c2-0abbbc197773"}
+{"event": "submitted", "folder": "L4,5,6/三座雪峰", "key": "L4,5,6__三座雪峰", "task_id": "019db918-04ea-7bd5-8a33-7eca46f14c8d"}
+{"event": "submitted", "folder": "L4,5,6/飞燕图", "key": "L4,5,6__飞燕图", "task_id": "019db918-191c-7b13-b6fc-96b02f2d5389"}
+{"event": "polled", "key": "L1__粉莲四朵", "progress": 51, "status": "IN_PROGRESS", "task_id": "019db916-2e97-7c5b-b9f0-8df493f30114"}
+{"event": "polled", "key": "L1__花瓣", "progress": 99, "status": "IN_PROGRESS", "task_id": "019db916-44ef-7c5c-b038-e01acf7d83b5"}
+{"event": "polled", "key": "L2__古碑苔痕", "progress": 99, "status": "IN_PROGRESS", "task_id": "019db916-56fa-72b4-b28c-ea15f48e022f"}
+{"event": "polled", "key": "L2__枯木", "progress": 99, "status": "IN_PROGRESS", "task_id": "019db916-6de0-7aa9-a6fd-e1fec6e99b67"}
+{"event": "polled", "key": "L2__萤火虫", "progress": 99, "status": "IN_PROGRESS", "task_id": "019db916-88b2-7c62-ae86-deb3375218f2"}
+{"event": "polled", "key": "L3__幻鹿三景", "progress": 42, "status": "IN_PROGRESS", "task_id": "019db917-f066-7c9c-b6c2-0abbbc197773"}
+{"event": "polled", "key": "L4,5,6__三座雪峰", "progress": 27, "status": "IN_PROGRESS", "task_id": "019db918-04ea-7bd5-8a33-7eca46f14c8d"}
+{"event": "polled", "key": "L4,5,6__飞燕图", "progress": 49, "status": "IN_PROGRESS", "task_id": "019db918-191c-7b13-b6fc-96b02f2d5389"}
+{"event": "polled", "key": "L1__粉莲四朵", "progress": 93, "status": "IN_PROGRESS", "task_id": "019db916-2e97-7c5b-b9f0-8df493f30114"}
+{"event": "polled", "key": "L1__花瓣", "progress": 100, "status": "SUCCEEDED", "task_id": "019db916-44ef-7c5c-b038-e01acf7d83b5"}
+{"event": "polled", "key": "L2__古碑苔痕", "progress": 100, "status": "SUCCEEDED", "task_id": "019db916-56fa-72b4-b28c-ea15f48e022f"}
+{"event": "polled", "key": "L2__枯木", "progress": 100, "status": "SUCCEEDED", "task_id": "019db916-6de0-7aa9-a6fd-e1fec6e99b67"}
+{"event": "polled", "key": "L2__萤火虫", "progress": 100, "status": "SUCCEEDED", "task_id": "019db916-88b2-7c62-ae86-deb3375218f2"}
+{"event": "polled", "key": "L3__幻鹿三景", "progress": 99, "status": "IN_PROGRESS", "task_id": "019db917-f066-7c9c-b6c2-0abbbc197773"}
+{"event": "polled", "key": "L4,5,6__三座雪峰", "progress": 99, "status": "IN_PROGRESS", "task_id": "019db918-04ea-7bd5-8a33-7eca46f14c8d"}
+{"event": "polled", "key": "L4,5,6__飞燕图", "progress": 100, "status": "SUCCEEDED", "task_id": "019db918-191c-7b13-b6fc-96b02f2d5389"}
+{"event": "polled", "key": "L1__粉莲四朵", "progress": 100, "status": "SUCCEEDED", "task_id": "019db916-2e97-7c5b-b9f0-8df493f30114"}
+{"event": "polled", "key": "L3__幻鹿三景", "progress": 100, "status": "SUCCEEDED", "task_id": "019db917-f066-7c9c-b6c2-0abbbc197773"}
+{"event": "polled", "key": "L4,5,6__三座雪峰", "progress": 100, "status": "SUCCEEDED", "task_id": "019db918-04ea-7bd5-8a33-7eca46f14c8d"}
+{"event": "submitted", "folder": "L4,5,6/飞燕图", "key": "L4,5,6__飞燕图", "task_id": "019db92e-003e-7ee5-add5-7ea4fd63ac5e"}
+{"event": "polled", "key": "L1__粉莲四朵", "progress": 100, "status": "SUCCEEDED", "task_id": "019db916-2e97-7c5b-b9f0-8df493f30114"}
+{"event": "polled", "key": "L1__花瓣", "progress": 100, "status": "SUCCEEDED", "task_id": "019db916-44ef-7c5c-b038-e01acf7d83b5"}
+{"event": "polled", "key": "L2__古碑苔痕", "progress": 100, "status": "SUCCEEDED", "task_id": "019db916-56fa-72b4-b28c-ea15f48e022f"}
+{"event": "polled", "key": "L2__枯木", "progress": 100, "status": "SUCCEEDED", "task_id": "019db916-6de0-7aa9-a6fd-e1fec6e99b67"}
+{"event": "polled", "key": "L2__萤火虫", "progress": 100, "status": "SUCCEEDED", "task_id": "019db916-88b2-7c62-ae86-deb3375218f2"}
+{"event": "polled", "key": "L3__幻鹿三景", "progress": 100, "status": "SUCCEEDED", "task_id": "019db917-f066-7c9c-b6c2-0abbbc197773"}
+{"event": "polled", "key": "L4,5,6__三座雪峰", "progress": 100, "status": "SUCCEEDED", "task_id": "019db918-04ea-7bd5-8a33-7eca46f14c8d"}
+{"event": "polled", "key": "L4,5,6__飞燕图", "progress": 93, "status": "IN_PROGRESS", "task_id": "019db92e-003e-7ee5-add5-7ea4fd63ac5e"}
+{"event": "polled", "key": "L1__粉莲四朵", "progress": 100, "status": "SUCCEEDED", "task_id": "019db916-2e97-7c5b-b9f0-8df493f30114"}
+{"event": "polled", "key": "L1__花瓣", "progress": 100, "status": "SUCCEEDED", "task_id": "019db916-44ef-7c5c-b038-e01acf7d83b5"}
+{"event": "polled", "key": "L2__古碑苔痕", "progress": 100, "status": "SUCCEEDED", "task_id": "019db916-56fa-72b4-b28c-ea15f48e022f"}
+{"event": "polled", "key": "L2__枯木", "progress": 100, "status": "SUCCEEDED", "task_id": "019db916-6de0-7aa9-a6fd-e1fec6e99b67"}
+{"event": "polled", "key": "L2__萤火虫", "progress": 100, "status": "SUCCEEDED", "task_id": "019db916-88b2-7c62-ae86-deb3375218f2"}
+{"event": "polled", "key": "L3__幻鹿三景", "progress": 100, "status": "SUCCEEDED", "task_id": "019db917-f066-7c9c-b6c2-0abbbc197773"}
+{"event": "polled", "key": "L4,5,6__三座雪峰", "progress": 100, "status": "SUCCEEDED", "task_id": "019db918-04ea-7bd5-8a33-7eca46f14c8d"}
+{"event": "polled", "key": "L4,5,6__飞燕图", "progress": 99, "status": "IN_PROGRESS", "task_id": "019db92e-003e-7ee5-add5-7ea4fd63ac5e"}
+{"event": "polled", "key": "L1__粉莲四朵", "progress": 100, "status": "SUCCEEDED", "task_id": "019db916-2e97-7c5b-b9f0-8df493f30114"}
+{"event": "polled", "key": "L1__花瓣", "progress": 100, "status": "SUCCEEDED", "task_id": "019db916-44ef-7c5c-b038-e01acf7d83b5"}
+{"event": "polled", "key": "L2__古碑苔痕", "progress": 100, "status": "SUCCEEDED", "task_id": "019db916-56fa-72b4-b28c-ea15f48e022f"}
+{"event": "polled", "key": "L2__枯木", "progress": 100, "status": "SUCCEEDED", "task_id": "019db916-6de0-7aa9-a6fd-e1fec6e99b67"}
+{"event": "polled", "key": "L2__萤火虫", "progress": 100, "status": "SUCCEEDED", "task_id": "019db916-88b2-7c62-ae86-deb3375218f2"}
+{"event": "polled", "key": "L3__幻鹿三景", "progress": 100, "status": "SUCCEEDED", "task_id": "019db917-f066-7c9c-b6c2-0abbbc197773"}
+{"event": "polled", "key": "L4,5,6__三座雪峰", "progress": 100, "status": "SUCCEEDED", "task_id": "019db918-04ea-7bd5-8a33-7eca46f14c8d"}
+{"event": "polled", "key": "L4,5,6__飞燕图", "progress": 99, "status": "IN_PROGRESS", "task_id": "019db92e-003e-7ee5-add5-7ea4fd63ac5e"}
+{"event": "polled", "key": "L1__粉莲四朵", "progress": 100, "status": "SUCCEEDED", "task_id": "019db916-2e97-7c5b-b9f0-8df493f30114"}
+{"event": "polled", "key": "L1__花瓣", "progress": 100, "status": "SUCCEEDED", "task_id": "019db916-44ef-7c5c-b038-e01acf7d83b5"}
+{"event": "polled", "key": "L2__古碑苔痕", "progress": 100, "status": "SUCCEEDED", "task_id": "019db916-56fa-72b4-b28c-ea15f48e022f"}
+{"event": "polled", "key": "L2__枯木", "progress": 100, "status": "SUCCEEDED", "task_id": "019db916-6de0-7aa9-a6fd-e1fec6e99b67"}
+{"event": "polled", "key": "L2__萤火虫", "progress": 100, "status": "SUCCEEDED", "task_id": "019db916-88b2-7c62-ae86-deb3375218f2"}
+{"event": "polled", "key": "L3__幻鹿三景", "progress": 100, "status": "SUCCEEDED", "task_id": "019db917-f066-7c9c-b6c2-0abbbc197773"}
+{"event": "polled", "key": "L4,5,6__三座雪峰", "progress": 100, "status": "SUCCEEDED", "task_id": "019db918-04ea-7bd5-8a33-7eca46f14c8d"}
+{"event": "polled", "key": "L4,5,6__飞燕图", "progress": 100, "status": "SUCCEEDED", "task_id": "019db92e-003e-7ee5-add5-7ea4fd63ac5e"}

@@ -1,0 +1,2980 @@
+{
+  "generated_at": "2026-04-23T13:06:13.628572",
+  "params": {
+    "threshold": 30,
+    "min_area": 1500,
+    "pad": 12,
+    "keep_mode": "all",
+    "topk": 4,
+    "area_ratio": 0.12
+  },
+  "images": [
+    {
+      "source": "Assets/2D/L1/ChatGPT Image Apr 23, 2026, 11_30_19 AM (1).png",
+      "folder": "L1",
+      "num_panels": 4,
+      "panels": [
+        {
+          "bbox": [
+            97,
+            84,
+            556,
+            585
+          ],
+          "area": 151082,
+          "centroid": [
+            328.4853126116943,
+            344.9645291960657
+          ]
+        },
+        {
+          "bbox": [
+            690,
+            89,
+            1121,
+            587
+          ],
+          "area": 146043,
+          "centroid": [
+            906.157255055018,
+            346.8498250515259
+          ]
+        },
+        {
+          "bbox": [
+            93,
+            643,
+            563,
+            1119
+          ],
+          "area": 151739,
+          "centroid": [
+            328.3666031804612,
+            879.6953584773855
+          ]
+        },
+        {
+          "bbox": [
+            675,
+            650,
+            1134,
+            1139
+          ],
+          "area": 150900,
+          "centroid": [
+            903.7015043074884,
+            901.0525182239894
+          ]
+        }
+      ],
+      "saved_paths": [
+        "Assets/2D_split/L1/ChatGPT Image Apr 23, 2026, 11_30_19 AM (1)/panel_00.png",
+        "Assets/2D_split/L1/ChatGPT Image Apr 23, 2026, 11_30_19 AM (1)/panel_01.png",
+        "Assets/2D_split/L1/ChatGPT Image Apr 23, 2026, 11_30_19 AM (1)/panel_02.png",
+        "Assets/2D_split/L1/ChatGPT Image Apr 23, 2026, 11_30_19 AM (1)/panel_03.png"
+      ]
+    },
+    {
+      "source": "Assets/2D/L1/ChatGPT Image Apr 23, 2026, 11_30_19 AM (2).png",
+      "folder": "L1",
+      "num_panels": 4,
+      "panels": [
+        {
+          "bbox": [
+            5,
+            116,
+            640,
+            616
+          ],
+          "area": 181919,
+          "centroid": [
+            333.20720760338395,
+            373.73068233664435
+          ]
+        },
+        {
+          "bbox": [
+            631,
+            252,
+            1248,
+            554
+          ],
+          "area": 111582,
+          "centroid": [
+            933.4832679105949,
+            413.3114211969673
+          ]
+        },
+        {
+          "bbox": [
+            13,
+            622,
+            605,
+            1174
+          ],
+          "area": 205243,
+          "centroid": [
+            308.6627363661611,
+            912.957927919588
+          ]
+        },
+        {
+          "bbox": [
+            615,
+            691,
+            1252,
+            1147
+          ],
+          "area": 168643,
+          "centroid": [
+            924.0122625902053,
+            926.8041484081758
+          ]
+        }
+      ],
+      "saved_paths": [
+        "Assets/2D_split/L1/ChatGPT Image Apr 23, 2026, 11_30_19 AM (2)/panel_00.png",
+        "Assets/2D_split/L1/ChatGPT Image Apr 23, 2026, 11_30_19 AM (2)/panel_01.png",
+        "Assets/2D_split/L1/ChatGPT Image Apr 23, 2026, 11_30_19 AM (2)/panel_02.png",
+        "Assets/2D_split/L1/ChatGPT Image Apr 23, 2026, 11_30_19 AM (2)/panel_03.png"
+      ]
+    },
+    {
+      "source": "Assets/2D/L1/ChatGPT Image Apr 23, 2026, 11_30_19 AM (3).png",
+      "folder": "L1",
+      "num_panels": 4,
+      "panels": [
+        {
+          "bbox": [
+            512,
+            58,
+            728,
+            725
+          ],
+          "area": 46343,
+          "centroid": [
+            647.029065878342,
+            409.17812830416676
+          ]
+        },
+        {
+          "bbox": [
+            83,
+            61,
+            429,
+            727
+          ],
+          "area": 118585,
+          "centroid": [
+            256.7140363452376,
+            384.21469831766245
+          ]
+        },
+        {
+          "bbox": [
+            858,
+            62,
+            1162,
+            730
+          ],
+          "area": 106728,
+          "centroid": [
+            997.3493366314369,
+            384.93862903830296
+          ]
+        },
+        {
+          "bbox": [
+            405,
+            744,
+            802,
+            1199
+          ],
+          "area": 76766,
+          "centroid": [
+            586.2632415392231,
+            975.3525128312014
+          ]
+        }
+      ],
+      "saved_paths": [
+        "Assets/2D_split/L1/ChatGPT Image Apr 23, 2026, 11_30_19 AM (3)/panel_00.png",
+        "Assets/2D_split/L1/ChatGPT Image Apr 23, 2026, 11_30_19 AM (3)/panel_01.png",
+        "Assets/2D_split/L1/ChatGPT Image Apr 23, 2026, 11_30_19 AM (3)/panel_02.png",
+        "Assets/2D_split/L1/ChatGPT Image Apr 23, 2026, 11_30_19 AM (3)/panel_03.png"
+      ]
+    },
+    {
+      "source": "Assets/2D/L1/ChatGPT Image Apr 23, 2026, 11_30_20 AM (4).png",
+      "folder": "L1",
+      "num_panels": 4,
+      "panels": [
+        {
+          "bbox": [
+            65,
+            132,
+            536,
+            540
+          ],
+          "area": 110742,
+          "centroid": [
+            300.5339257011793,
+            353.09655776489495
+          ]
+        },
+        {
+          "bbox": [
+            651,
+            223,
+            1181,
+            532
+          ],
+          "area": 95863,
+          "centroid": [
+            917.5232675797753,
+            379.5991049727215
+          ]
+        },
+        {
+          "bbox": [
+            74,
+            632,
+            550,
+            1096
+          ],
+          "area": 127289,
+          "centroid": [
+            312.34193056744886,
+            866.6277211699361
+          ]
+        },
+        {
+          "bbox": [
+            655,
+            671,
+            1170,
+            1068
+          ],
+          "area": 121143,
+          "centroid": [
+            911.1858217148329,
+            878.2886175841774
+          ]
+        }
+      ],
+      "saved_paths": [
+        "Assets/2D_split/L1/ChatGPT Image Apr 23, 2026, 11_30_20 AM (4)/panel_00.png",
+        "Assets/2D_split/L1/ChatGPT Image Apr 23, 2026, 11_30_20 AM (4)/panel_01.png",
+        "Assets/2D_split/L1/ChatGPT Image Apr 23, 2026, 11_30_20 AM (4)/panel_02.png",
+        "Assets/2D_split/L1/ChatGPT Image Apr 23, 2026, 11_30_20 AM (4)/panel_03.png"
+      ]
+    },
+    {
+      "source": "Assets/2D/L1/ChatGPT Image Apr 23, 2026, 11_30_20 AM (5).png",
+      "folder": "L1",
+      "num_panels": 8,
+      "panels": [
+        {
+          "bbox": [
+            14,
+            97,
+            526,
+            586
+          ],
+          "area": 175136,
+          "centroid": [
+            268.5133210761922,
+            340.85329115658686
+          ]
+        },
+        {
+          "bbox": [
+            520,
+            189,
+            922,
+            571
+          ],
+          "area": 104928,
+          "centroid": [
+            720.5460315645014,
+            380.1533718359256
+          ]
+        },
+        {
+          "bbox": [
+            931,
+            265,
+            1240,
+            572
+          ],
+          "area": 62359,
+          "centroid": [
+            1085.6753796565051,
+            418.7301111307109
+          ]
+        },
+        {
+          "bbox": [
+            20,
+            652,
+            511,
+            757
+          ],
+          "area": 29071,
+          "centroid": [
+            266.2415465584259,
+            704.8699047160401
+          ]
+        },
+        {
+          "bbox": [
+            526,
+            663,
+            917,
+            757
+          ],
+          "area": 19317,
+          "centroid": [
+            721.9100792048455,
+            710.1628617280116
+          ]
+        },
+        {
+          "bbox": [
+            949,
+            683,
+            1230,
+            758
+          ],
+          "area": 10004,
+          "centroid": [
+            1089.659536185526,
+            721.078268692523
+          ]
+        },
+        {
+          "bbox": [
+            19,
+            816,
+            938,
+            1132
+          ],
+          "area": 182734,
+          "centroid": [
+            446.69695842043626,
+            981.3377039850274
+          ]
+        },
+        {
+          "bbox": [
+            933,
+            903,
+            1248,
+            1103
+          ],
+          "area": 39763,
+          "centroid": [
+            1087.0975027035183,
+            1007.4422956014386
+          ]
+        }
+      ],
+      "saved_paths": [
+        "Assets/2D_split/L1/ChatGPT Image Apr 23, 2026, 11_30_20 AM (5)/panel_00.png",
+        "Assets/2D_split/L1/ChatGPT Image Apr 23, 2026, 11_30_20 AM (5)/panel_01.png",
+        "Assets/2D_split/L1/ChatGPT Image Apr 23, 2026, 11_30_20 AM (5)/panel_02.png",
+        "Assets/2D_split/L1/ChatGPT Image Apr 23, 2026, 11_30_20 AM (5)/panel_03.png",
+        "Assets/2D_split/L1/ChatGPT Image Apr 23, 2026, 11_30_20 AM (5)/panel_04.png",
+        "Assets/2D_split/L1/ChatGPT Image Apr 23, 2026, 11_30_20 AM (5)/panel_05.png",
+        "Assets/2D_split/L1/ChatGPT Image Apr 23, 2026, 11_30_20 AM (5)/panel_06.png",
+        "Assets/2D_split/L1/ChatGPT Image Apr 23, 2026, 11_30_20 AM (5)/panel_07.png"
+      ]
+    },
+    {
+      "source": "Assets/2D/L1/ChatGPT Image Apr 23, 2026, 11_30_20 AM (6).png",
+      "folder": "L1",
+      "num_panels": 7,
+      "panels": [
+        {
+          "bbox": [
+            126,
+            0,
+            1254,
+            725
+          ],
+          "area": 473639,
+          "centroid": [
+            739.7140311503065,
+            307.7925065292343
+          ]
+        },
+        {
+          "bbox": [
+            330,
+            699,
+            1052,
+            876
+          ],
+          "area": 25015,
+          "centroid": [
+            752.9031381171297,
+            782.0550069958025
+          ]
+        },
+        {
+          "bbox": [
+            963,
+            812,
+            1098,
+            863
+          ],
+          "area": 1704,
+          "centroid": [
+            1035.1191314553992,
+            836.0616197183099
+          ]
+        },
+        {
+          "bbox": [
+            723,
+            872,
+            887,
+            938
+          ],
+          "area": 2180,
+          "centroid": [
+            809.1408256880734,
+            906.3990825688073
+          ]
+        },
+        {
+          "bbox": [
+            477,
+            908,
+            710,
+            962
+          ],
+          "area": 2290,
+          "centroid": [
+            588.2620087336245,
+            937.4043668122271
+          ]
+        },
+        {
+          "bbox": [
+            632,
+            941,
+            821,
+            987
+          ],
+          "area": 1522,
+          "centroid": [
+            724.42247043364,
+            965.3416557161629
+          ]
+        },
+        {
+          "bbox": [
+            639,
+            1055,
+            783,
+            1107
+          ],
+          "area": 1685,
+          "centroid": [
+            711.4777448071217,
+            1078.2718100890208
+          ]
+        }
+      ],
+      "saved_paths": [
+        "Assets/2D_split/L1/ChatGPT Image Apr 23, 2026, 11_30_20 AM (6)/panel_00.png",
+        "Assets/2D_split/L1/ChatGPT Image Apr 23, 2026, 11_30_20 AM (6)/panel_01.png",
+        "Assets/2D_split/L1/ChatGPT Image Apr 23, 2026, 11_30_20 AM (6)/panel_02.png",
+        "Assets/2D_split/L1/ChatGPT Image Apr 23, 2026, 11_30_20 AM (6)/panel_03.png",
+        "Assets/2D_split/L1/ChatGPT Image Apr 23, 2026, 11_30_20 AM (6)/panel_04.png",
+        "Assets/2D_split/L1/ChatGPT Image Apr 23, 2026, 11_30_20 AM (6)/panel_05.png",
+        "Assets/2D_split/L1/ChatGPT Image Apr 23, 2026, 11_30_20 AM (6)/panel_06.png"
+      ]
+    },
+    {
+      "source": "Assets/2D/L2/ChatGPT Image Apr 23, 2026, 11_35_49 AM (1).png",
+      "folder": "L2",
+      "num_panels": 4,
+      "panels": [
+        {
+          "bbox": [
+            24,
+            145,
+            695,
+            581
+          ],
+          "area": 76234,
+          "centroid": [
+            364.71457617336097,
+            365.54525539785396
+          ]
+        },
+        {
+          "bbox": [
+            675,
+            203,
+            1233,
+            521
+          ],
+          "area": 71992,
+          "centroid": [
+            979.5160990110012,
+            345.31517390821205
+          ]
+        },
+        {
+          "bbox": [
+            34,
+            619,
+            686,
+            1108
+          ],
+          "area": 79747,
+          "centroid": [
+            367.66253275985304,
+            866.1078786662821
+          ]
+        },
+        {
+          "bbox": [
+            653,
+            661,
+            1219,
+            1020
+          ],
+          "area": 72306,
+          "centroid": [
+            957.0374519403646,
+            840.3759300749592
+          ]
+        }
+      ],
+      "saved_paths": [
+        "Assets/2D_split/L2/ChatGPT Image Apr 23, 2026, 11_35_49 AM (1)/panel_00.png",
+        "Assets/2D_split/L2/ChatGPT Image Apr 23, 2026, 11_35_49 AM (1)/panel_01.png",
+        "Assets/2D_split/L2/ChatGPT Image Apr 23, 2026, 11_35_49 AM (1)/panel_02.png",
+        "Assets/2D_split/L2/ChatGPT Image Apr 23, 2026, 11_35_49 AM (1)/panel_03.png"
+      ]
+    },
+    {
+      "source": "Assets/2D/L2/ChatGPT Image Apr 23, 2026, 11_35_50 AM (2).png",
+      "folder": "L2",
+      "num_panels": 25,
+      "panels": [
+        {
+          "bbox": [
+            540,
+            82,
+            687,
+            227
+          ],
+          "area": 11410,
+          "centroid": [
+            612.2396143733567,
+            154.04057843996495
+          ]
+        },
+        {
+          "bbox": [
+            792,
+            95,
+            908,
+            213
+          ],
+          "area": 6871,
+          "centroid": [
+            850.0355115703682,
+            153.330082957357
+          ]
+        },
+        {
+          "bbox": [
+            309,
+            101,
+            421,
+            209
+          ],
+          "area": 5755,
+          "centroid": [
+            364.2293657688966,
+            154.4823631624674
+          ]
+        },
+        {
+          "bbox": [
+            1050,
+            106,
+            1158,
+            214
+          ],
+          "area": 5340,
+          "centroid": [
+            1103.4576779026218,
+            159.02940074906368
+          ]
+        },
+        {
+          "bbox": [
+            86,
+            115,
+            170,
+            198
+          ],
+          "area": 2712,
+          "centroid": [
+            127.49004424778761,
+            155.71755162241888
+          ]
+        },
+        {
+          "bbox": [
+            773,
+            324,
+            909,
+            466
+          ],
+          "area": 10353,
+          "centroid": [
+            840.3657876943881,
+            394.040761132039
+          ]
+        },
+        {
+          "bbox": [
+            281,
+            325,
+            442,
+            484
+          ],
+          "area": 14290,
+          "centroid": [
+            360.3597620713786,
+            403.83918824352696
+          ]
+        },
+        {
+          "bbox": [
+            547,
+            339,
+            673,
+            463
+          ],
+          "area": 7919,
+          "centroid": [
+            609.6456623311024,
+            400.60348528854655
+          ]
+        },
+        {
+          "bbox": [
+            66,
+            350,
+            177,
+            459
+          ],
+          "area": 5646,
+          "centroid": [
+            120.29419057739993,
+            403.9252568189869
+          ]
+        },
+        {
+          "bbox": [
+            1038,
+            354,
+            1152,
+            466
+          ],
+          "area": 6055,
+          "centroid": [
+            1093.8391412056153,
+            409.0226259289843
+          ]
+        },
+        {
+          "bbox": [
+            772,
+            575,
+            924,
+            730
+          ],
+          "area": 12782,
+          "centroid": [
+            848.0145517133469,
+            652.2184321702395
+          ]
+        },
+        {
+          "bbox": [
+            48,
+            587,
+            197,
+            735
+          ],
+          "area": 11981,
+          "centroid": [
+            122.19898172105835,
+            660.7141307069527
+          ]
+        },
+        {
+          "bbox": [
+            550,
+            590,
+            680,
+            718
+          ],
+          "area": 8374,
+          "centroid": [
+            613.8359207069501,
+            653.4537855266301
+          ]
+        },
+        {
+          "bbox": [
+            1023,
+            599,
+            1160,
+            727
+          ],
+          "area": 8914,
+          "centroid": [
+            1091.2405205295042,
+            662.4222571236257
+          ]
+        },
+        {
+          "bbox": [
+            322,
+            606,
+            430,
+            717
+          ],
+          "area": 5602,
+          "centroid": [
+            375.0296322741878,
+            660.8912888254195
+          ]
+        },
+        {
+          "bbox": [
+            567,
+            839,
+            668,
+            943
+          ],
+          "area": 4741,
+          "centroid": [
+            617.1282429867117,
+            890.369331364691
+          ]
+        },
+        {
+          "bbox": [
+            1030,
+            839,
+            1147,
+            950
+          ],
+          "area": 6136,
+          "centroid": [
+            1087.9957627118645,
+            894.2260430247718
+          ]
+        },
+        {
+          "bbox": [
+            326,
+            849,
+            419,
+            944
+          ],
+          "area": 3770,
+          "centroid": [
+            371.8395225464191,
+            895.9387267904509
+          ]
+        },
+        {
+          "bbox": [
+            78,
+            853,
+            169,
+            943
+          ],
+          "area": 3345,
+          "centroid": [
+            122.98026905829596,
+            897.0828101644245
+          ]
+        },
+        {
+          "bbox": [
+            810,
+            861,
+            884,
+            932
+          ],
+          "area": 1801,
+          "centroid": [
+            845.823431426985,
+            896.2071071626874
+          ]
+        },
+        {
+          "bbox": [
+            978,
+            1017,
+            1186,
+            1220
+          ],
+          "area": 25280,
+          "centroid": [
+            1082.8774920886076,
+            1118.0142800632912
+          ]
+        },
+        {
+          "bbox": [
+            272,
+            1050,
+            431,
+            1211
+          ],
+          "area": 14068,
+          "centroid": [
+            350.6821154392949,
+            1130.144512368496
+          ]
+        },
+        {
+          "bbox": [
+            537,
+            1058,
+            679,
+            1199
+          ],
+          "area": 10608,
+          "centroid": [
+            607.1182126696832,
+            1127.8544494720966
+          ]
+        },
+        {
+          "bbox": [
+            799,
+            1079,
+            904,
+            1183
+          ],
+          "area": 5001,
+          "centroid": [
+            851.0421915616877,
+            1130.5344931013797
+          ]
+        },
+        {
+          "bbox": [
+            74,
+            1081,
+            185,
+            1189
+          ],
+          "area": 5543,
+          "centroid": [
+            128.58379938661375,
+            1134.2635756810391
+          ]
+        }
+      ],
+      "saved_paths": [
+        "Assets/2D_split/L2/ChatGPT Image Apr 23, 2026, 11_35_50 AM (2)/panel_00.png",
+        "Assets/2D_split/L2/ChatGPT Image Apr 23, 2026, 11_35_50 AM (2)/panel_01.png",
+        "Assets/2D_split/L2/ChatGPT Image Apr 23, 2026, 11_35_50 AM (2)/panel_02.png",
+        "Assets/2D_split/L2/ChatGPT Image Apr 23, 2026, 11_35_50 AM (2)/panel_03.png",
+        "Assets/2D_split/L2/ChatGPT Image Apr 23, 2026, 11_35_50 AM (2)/panel_04.png",
+        "Assets/2D_split/L2/ChatGPT Image Apr 23, 2026, 11_35_50 AM (2)/panel_05.png",
+        "Assets/2D_split/L2/ChatGPT Image Apr 23, 2026, 11_35_50 AM (2)/panel_06.png",
+        "Assets/2D_split/L2/ChatGPT Image Apr 23, 2026, 11_35_50 AM (2)/panel_07.png",
+        "Assets/2D_split/L2/ChatGPT Image Apr 23, 2026, 11_35_50 AM (2)/panel_08.png",
+        "Assets/2D_split/L2/ChatGPT Image Apr 23, 2026, 11_35_50 AM (2)/panel_09.png",
+        "Assets/2D_split/L2/ChatGPT Image Apr 23, 2026, 11_35_50 AM (2)/panel_10.png",
+        "Assets/2D_split/L2/ChatGPT Image Apr 23, 2026, 11_35_50 AM (2)/panel_11.png",
+        "Assets/2D_split/L2/ChatGPT Image Apr 23, 2026, 11_35_50 AM (2)/panel_12.png",
+        "Assets/2D_split/L2/ChatGPT Image Apr 23, 2026, 11_35_50 AM (2)/panel_13.png",
+        "Assets/2D_split/L2/ChatGPT Image Apr 23, 2026, 11_35_50 AM (2)/panel_14.png",
+        "Assets/2D_split/L2/ChatGPT Image Apr 23, 2026, 11_35_50 AM (2)/panel_15.png",
+        "Assets/2D_split/L2/ChatGPT Image Apr 23, 2026, 11_35_50 AM (2)/panel_16.png",
+        "Assets/2D_split/L2/ChatGPT Image Apr 23, 2026, 11_35_50 AM (2)/panel_17.png",
+        "Assets/2D_split/L2/ChatGPT Image Apr 23, 2026, 11_35_50 AM (2)/panel_18.png",
+        "Assets/2D_split/L2/ChatGPT Image Apr 23, 2026, 11_35_50 AM (2)/panel_19.png",
+        "Assets/2D_split/L2/ChatGPT Image Apr 23, 2026, 11_35_50 AM (2)/panel_20.png",
+        "Assets/2D_split/L2/ChatGPT Image Apr 23, 2026, 11_35_50 AM (2)/panel_21.png",
+        "Assets/2D_split/L2/ChatGPT Image Apr 23, 2026, 11_35_50 AM (2)/panel_22.png",
+        "Assets/2D_split/L2/ChatGPT Image Apr 23, 2026, 11_35_50 AM (2)/panel_23.png",
+        "Assets/2D_split/L2/ChatGPT Image Apr 23, 2026, 11_35_50 AM (2)/panel_24.png"
+      ]
+    },
+    {
+      "source": "Assets/2D/L2/ChatGPT Image Apr 23, 2026, 11_35_50 AM (3).png",
+      "folder": "L2",
+      "num_panels": 4,
+      "panels": [
+        {
+          "bbox": [
+            5,
+            161,
+            363,
+            1047
+          ],
+          "area": 203961,
+          "centroid": [
+            181.58450390025544,
+            637.4872500134829
+          ]
+        },
+        {
+          "bbox": [
+            367,
+            165,
+            587,
+            1056
+          ],
+          "area": 88282,
+          "centroid": [
+            473.8102331166036,
+            680.662671892345
+          ]
+        },
+        {
+          "bbox": [
+            583,
+            165,
+            925,
+            1041
+          ],
+          "area": 196251,
+          "centroid": [
+            757.5840174062807,
+            637.3268620287286
+          ]
+        },
+        {
+          "bbox": [
+            918,
+            172,
+            1254,
+            1045
+          ],
+          "area": 177294,
+          "centroid": [
+            1078.9452378535088,
+            644.5960269383058
+          ]
+        }
+      ],
+      "saved_paths": [
+        "Assets/2D_split/L2/ChatGPT Image Apr 23, 2026, 11_35_50 AM (3)/panel_00.png",
+        "Assets/2D_split/L2/ChatGPT Image Apr 23, 2026, 11_35_50 AM (3)/panel_01.png",
+        "Assets/2D_split/L2/ChatGPT Image Apr 23, 2026, 11_35_50 AM (3)/panel_02.png",
+        "Assets/2D_split/L2/ChatGPT Image Apr 23, 2026, 11_35_50 AM (3)/panel_03.png"
+      ]
+    },
+    {
+      "source": "Assets/2D/L2/ChatGPT Image Apr 23, 2026, 11_35_50 AM (4).png",
+      "folder": "L2",
+      "num_panels": 6,
+      "panels": [
+        {
+          "bbox": [
+            0,
+            57,
+            244,
+            1172
+          ],
+          "area": 127925,
+          "centroid": [
+            124.78430330271644,
+            664.06048856752
+          ]
+        },
+        {
+          "bbox": [
+            835,
+            57,
+            1076,
+            1173
+          ],
+          "area": 127400,
+          "centroid": [
+            967.4114835164835,
+            679.7831789638933
+          ]
+        },
+        {
+          "bbox": [
+            219,
+            58,
+            417,
+            1174
+          ],
+          "area": 102733,
+          "centroid": [
+            306.1407337467026,
+            682.9423164903195
+          ]
+        },
+        {
+          "bbox": [
+            409,
+            60,
+            660,
+            1175
+          ],
+          "area": 135345,
+          "centroid": [
+            541.4405925597547,
+            668.3929217924563
+          ]
+        },
+        {
+          "bbox": [
+            1046,
+            69,
+            1254,
+            1173
+          ],
+          "area": 109253,
+          "centroid": [
+            1141.2783539124785,
+            689.9178146137864
+          ]
+        },
+        {
+          "bbox": [
+            608,
+            76,
+            844,
+            1175
+          ],
+          "area": 122868,
+          "centroid": [
+            720.3933245434124,
+            682.1421851092229
+          ]
+        }
+      ],
+      "saved_paths": [
+        "Assets/2D_split/L2/ChatGPT Image Apr 23, 2026, 11_35_50 AM (4)/panel_00.png",
+        "Assets/2D_split/L2/ChatGPT Image Apr 23, 2026, 11_35_50 AM (4)/panel_01.png",
+        "Assets/2D_split/L2/ChatGPT Image Apr 23, 2026, 11_35_50 AM (4)/panel_02.png",
+        "Assets/2D_split/L2/ChatGPT Image Apr 23, 2026, 11_35_50 AM (4)/panel_03.png",
+        "Assets/2D_split/L2/ChatGPT Image Apr 23, 2026, 11_35_50 AM (4)/panel_04.png",
+        "Assets/2D_split/L2/ChatGPT Image Apr 23, 2026, 11_35_50 AM (4)/panel_05.png"
+      ]
+    },
+    {
+      "source": "Assets/2D/L2/ChatGPT Image Apr 23, 2026, 11_35_50 AM (5).png",
+      "folder": "L2",
+      "num_panels": 9,
+      "panels": [
+        {
+          "bbox": [
+            44,
+            42,
+            1198,
+            267
+          ],
+          "area": 115491,
+          "centroid": [
+            613.1985695855088,
+            175.9696859495545
+          ]
+        },
+        {
+          "bbox": [
+            52,
+            262,
+            583,
+            459
+          ],
+          "area": 46867,
+          "centroid": [
+            309.6921074530053,
+            372.3253461924168
+          ]
+        },
+        {
+          "bbox": [
+            630,
+            281,
+            1193,
+            476
+          ],
+          "area": 53318,
+          "centroid": [
+            927.8188041561949,
+            385.28729509734046
+          ]
+        },
+        {
+          "bbox": [
+            636,
+            484,
+            1213,
+            705
+          ],
+          "area": 57158,
+          "centroid": [
+            924.9024283564855,
+            613.5663249238952
+          ]
+        },
+        {
+          "bbox": [
+            42,
+            487,
+            611,
+            703
+          ],
+          "area": 59891,
+          "centroid": [
+            330.99292047219114,
+            603.5908567230468
+          ]
+        },
+        {
+          "bbox": [
+            628,
+            712,
+            1221,
+            930
+          ],
+          "area": 53973,
+          "centroid": [
+            917.2709317621774,
+            840.5516276656847
+          ]
+        },
+        {
+          "bbox": [
+            48,
+            725,
+            518,
+            896
+          ],
+          "area": 31542,
+          "centroid": [
+            265.8240124278739,
+            817.2087058525141
+          ]
+        },
+        {
+          "bbox": [
+            22,
+            886,
+            734,
+            1203
+          ],
+          "area": 107209,
+          "centroid": [
+            386.6113479278792,
+            1073.0183659953923
+          ]
+        },
+        {
+          "bbox": [
+            698,
+            952,
+            1212,
+            1219
+          ],
+          "area": 63471,
+          "centroid": [
+            986.6574183485371,
+            1113.7153030517875
+          ]
+        }
+      ],
+      "saved_paths": [
+        "Assets/2D_split/L2/ChatGPT Image Apr 23, 2026, 11_35_50 AM (5)/panel_00.png",
+        "Assets/2D_split/L2/ChatGPT Image Apr 23, 2026, 11_35_50 AM (5)/panel_01.png",
+        "Assets/2D_split/L2/ChatGPT Image Apr 23, 2026, 11_35_50 AM (5)/panel_02.png",
+        "Assets/2D_split/L2/ChatGPT Image Apr 23, 2026, 11_35_50 AM (5)/panel_03.png",
+        "Assets/2D_split/L2/ChatGPT Image Apr 23, 2026, 11_35_50 AM (5)/panel_04.png",
+        "Assets/2D_split/L2/ChatGPT Image Apr 23, 2026, 11_35_50 AM (5)/panel_05.png",
+        "Assets/2D_split/L2/ChatGPT Image Apr 23, 2026, 11_35_50 AM (5)/panel_06.png",
+        "Assets/2D_split/L2/ChatGPT Image Apr 23, 2026, 11_35_50 AM (5)/panel_07.png",
+        "Assets/2D_split/L2/ChatGPT Image Apr 23, 2026, 11_35_50 AM (5)/panel_08.png"
+      ]
+    },
+    {
+      "source": "Assets/2D/L3/ChatGPT Image Apr 23, 2026, 11_45_23 AM (1).png",
+      "folder": "L3",
+      "num_panels": 5,
+      "panels": [
+        {
+          "bbox": [
+            1016,
+            495,
+            1214,
+            733
+          ],
+          "area": 24543,
+          "centroid": [
+            1114.0808784582161,
+            613.1441144114411
+          ]
+        },
+        {
+          "bbox": [
+            767,
+            508,
+            956,
+            723
+          ],
+          "area": 21212,
+          "centroid": [
+            861.5163586649066,
+            615.0816047520271
+          ]
+        },
+        {
+          "bbox": [
+            281,
+            515,
+            460,
+            709
+          ],
+          "area": 20025,
+          "centroid": [
+            369.8861423220974,
+            611.9684893882646
+          ]
+        },
+        {
+          "bbox": [
+            527,
+            520,
+            703,
+            709
+          ],
+          "area": 18669,
+          "centroid": [
+            613.5974074669238,
+            614.424339814666
+          ]
+        },
+        {
+          "bbox": [
+            46,
+            523,
+            218,
+            701
+          ],
+          "area": 17744,
+          "centroid": [
+            131.23044409377817,
+            611.8645175834084
+          ]
+        }
+      ],
+      "saved_paths": [
+        "Assets/2D_split/L3/ChatGPT Image Apr 23, 2026, 11_45_23 AM (1)/panel_00.png",
+        "Assets/2D_split/L3/ChatGPT Image Apr 23, 2026, 11_45_23 AM (1)/panel_01.png",
+        "Assets/2D_split/L3/ChatGPT Image Apr 23, 2026, 11_45_23 AM (1)/panel_02.png",
+        "Assets/2D_split/L3/ChatGPT Image Apr 23, 2026, 11_45_23 AM (1)/panel_03.png",
+        "Assets/2D_split/L3/ChatGPT Image Apr 23, 2026, 11_45_23 AM (1)/panel_04.png"
+      ]
+    },
+    {
+      "source": "Assets/2D/L3/ChatGPT Image Apr 23, 2026, 11_45_23 AM (2).png",
+      "folder": "L3",
+      "num_panels": 1,
+      "panels": [
+        {
+          "bbox": [
+            572,
+            687,
+            679,
+            791
+          ],
+          "area": 1624,
+          "centroid": [
+            624.9464285714286,
+            737.951354679803
+          ]
+        }
+      ],
+      "saved_paths": [
+        "Assets/2D_split/L3/ChatGPT Image Apr 23, 2026, 11_45_23 AM (2)/panel_00.png"
+      ]
+    },
+    {
+      "source": "Assets/2D/L3/ChatGPT Image Apr 23, 2026, 11_45_23 AM (3).png",
+      "folder": "L3",
+      "num_panels": 0,
+      "panels": [],
+      "saved_paths": []
+    },
+    {
+      "source": "Assets/2D/L3/ChatGPT Image Apr 23, 2026, 11_45_23 AM (4).png",
+      "folder": "L3",
+      "num_panels": 3,
+      "panels": [
+        {
+          "bbox": [
+            471,
+            21,
+            1238,
+            673
+          ],
+          "area": 146343,
+          "centroid": [
+            811.511155299536,
+            422.95318532488744
+          ]
+        },
+        {
+          "bbox": [
+            78,
+            25,
+            363,
+            706
+          ],
+          "area": 80991,
+          "centroid": [
+            221.3133804990678,
+            383.9957402674371
+          ]
+        },
+        {
+          "bbox": [
+            385,
+            675,
+            1072,
+            1253
+          ],
+          "area": 121681,
+          "centroid": [
+            684.0877129543643,
+            1006.0436469128294
+          ]
+        }
+      ],
+      "saved_paths": [
+        "Assets/2D_split/L3/ChatGPT Image Apr 23, 2026, 11_45_23 AM (4)/panel_00.png",
+        "Assets/2D_split/L3/ChatGPT Image Apr 23, 2026, 11_45_23 AM (4)/panel_01.png",
+        "Assets/2D_split/L3/ChatGPT Image Apr 23, 2026, 11_45_23 AM (4)/panel_02.png"
+      ]
+    },
+    {
+      "source": "Assets/2D/L3/ChatGPT Image Apr 23, 2026, 11_45_23 AM (5).png",
+      "folder": "L3",
+      "num_panels": 9,
+      "panels": [
+        {
+          "bbox": [
+            270,
+            14,
+            793,
+            48
+          ],
+          "area": 2979,
+          "centroid": [
+            516.4753272910373,
+            30.163477677072844
+          ]
+        },
+        {
+          "bbox": [
+            2,
+            15,
+            69,
+            400
+          ],
+          "area": 2602,
+          "centroid": [
+            32.24750192159877,
+            209.5030745580323
+          ]
+        },
+        {
+          "bbox": [
+            46,
+            53,
+            1254,
+            1184
+          ],
+          "area": 610352,
+          "centroid": [
+            712.6839348441555,
+            651.0705150470549
+          ]
+        },
+        {
+          "bbox": [
+            100,
+            102,
+            186,
+            201
+          ],
+          "area": 2368,
+          "centroid": [
+            144.84459459459458,
+            149.12288851351352
+          ]
+        },
+        {
+          "bbox": [
+            585,
+            111,
+            671,
+            198
+          ],
+          "area": 3037,
+          "centroid": [
+            627.571287454725,
+            154.36285808363516
+          ]
+        },
+        {
+          "bbox": [
+            90,
+            138,
+            258,
+            269
+          ],
+          "area": 6630,
+          "centroid": [
+            182.55414781297134,
+            208.41900452488687
+          ]
+        },
+        {
+          "bbox": [
+            803,
+            1118,
+            971,
+            1197
+          ],
+          "area": 3686,
+          "centroid": [
+            895.473141616929,
+            1157.6348345089527
+          ]
+        },
+        {
+          "bbox": [
+            750,
+            1195,
+            1241,
+            1238
+          ],
+          "area": 2869,
+          "centroid": [
+            981.3067270826072,
+            1220.720808644127
+          ]
+        },
+        {
+          "bbox": [
+            122,
+            1205,
+            558,
+            1238
+          ],
+          "area": 2426,
+          "centroid": [
+            333.4719703215169,
+            1221.164468260511
+          ]
+        }
+      ],
+      "saved_paths": [
+        "Assets/2D_split/L3/ChatGPT Image Apr 23, 2026, 11_45_23 AM (5)/panel_00.png",
+        "Assets/2D_split/L3/ChatGPT Image Apr 23, 2026, 11_45_23 AM (5)/panel_01.png",
+        "Assets/2D_split/L3/ChatGPT Image Apr 23, 2026, 11_45_23 AM (5)/panel_02.png",
+        "Assets/2D_split/L3/ChatGPT Image Apr 23, 2026, 11_45_23 AM (5)/panel_03.png",
+        "Assets/2D_split/L3/ChatGPT Image Apr 23, 2026, 11_45_23 AM (5)/panel_04.png",
+        "Assets/2D_split/L3/ChatGPT Image Apr 23, 2026, 11_45_23 AM (5)/panel_05.png",
+        "Assets/2D_split/L3/ChatGPT Image Apr 23, 2026, 11_45_23 AM (5)/panel_06.png",
+        "Assets/2D_split/L3/ChatGPT Image Apr 23, 2026, 11_45_23 AM (5)/panel_07.png",
+        "Assets/2D_split/L3/ChatGPT Image Apr 23, 2026, 11_45_23 AM (5)/panel_08.png"
+      ]
+    },
+    {
+      "source": "Assets/2D/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_01 AM (1).png",
+      "folder": "L4,5,6",
+      "num_panels": 8,
+      "panels": [
+        {
+          "bbox": [
+            36,
+            8,
+            567,
+            353
+          ],
+          "area": 58288,
+          "centroid": [
+            300.94784518254187,
+            170.73186590721932
+          ]
+        },
+        {
+          "bbox": [
+            638,
+            18,
+            1192,
+            364
+          ],
+          "area": 45153,
+          "centroid": [
+            919.7683210417913,
+            181.76079108807832
+          ]
+        },
+        {
+          "bbox": [
+            113,
+            355,
+            553,
+            600
+          ],
+          "area": 44614,
+          "centroid": [
+            355.40525395615725,
+            474.5301250728471
+          ]
+        },
+        {
+          "bbox": [
+            689,
+            386,
+            1139,
+            605
+          ],
+          "area": 31423,
+          "centroid": [
+            926.7390128250008,
+            497.0490723355504
+          ]
+        },
+        {
+          "bbox": [
+            48,
+            604,
+            558,
+            947
+          ],
+          "area": 49219,
+          "centroid": [
+            302.7200268189114,
+            778.3561429529246
+          ]
+        },
+        {
+          "bbox": [
+            650,
+            614,
+            1117,
+            947
+          ],
+          "area": 34930,
+          "centroid": [
+            884.5694245634126,
+            776.300515316347
+          ]
+        },
+        {
+          "bbox": [
+            89,
+            906,
+            513,
+            1196
+          ],
+          "area": 47129,
+          "centroid": [
+            340.1705319442382,
+            1061.6479025652995
+          ]
+        },
+        {
+          "bbox": [
+            682,
+            931,
+            1081,
+            1194
+          ],
+          "area": 34947,
+          "centroid": [
+            909.9130969754199,
+            1062.93736229147
+          ]
+        }
+      ],
+      "saved_paths": [
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_01 AM (1)/panel_00.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_01 AM (1)/panel_01.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_01 AM (1)/panel_02.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_01 AM (1)/panel_03.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_01 AM (1)/panel_04.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_01 AM (1)/panel_05.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_01 AM (1)/panel_06.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_01 AM (1)/panel_07.png"
+      ]
+    },
+    {
+      "source": "Assets/2D/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_01 AM (2).png",
+      "folder": "L4,5,6",
+      "num_panels": 25,
+      "panels": [
+        {
+          "bbox": [
+            330,
+            24,
+            1252,
+            683
+          ],
+          "area": 203414,
+          "centroid": [
+            743.8237781077015,
+            405.9087378449861
+          ]
+        },
+        {
+          "bbox": [
+            86,
+            287,
+            198,
+            408
+          ],
+          "area": 5326,
+          "centroid": [
+            141.0801727375141,
+            345.47765677806984
+          ]
+        },
+        {
+          "bbox": [
+            41,
+            360,
+            306,
+            652
+          ],
+          "area": 19561,
+          "centroid": [
+            185.10740759674863,
+            548.0013291754001
+          ]
+        },
+        {
+          "bbox": [
+            228,
+            687,
+            366,
+            929
+          ],
+          "area": 7259,
+          "centroid": [
+            299.38490150158424,
+            825.2476925196308
+          ]
+        },
+        {
+          "bbox": [
+            372,
+            690,
+            818,
+            941
+          ],
+          "area": 43545,
+          "centroid": [
+            587.2500861178091,
+            821.6269606154552
+          ]
+        },
+        {
+          "bbox": [
+            814,
+            695,
+            1254,
+            945
+          ],
+          "area": 27244,
+          "centroid": [
+            1026.6676332403465,
+            857.1136764058141
+          ]
+        },
+        {
+          "bbox": [
+            25,
+            698,
+            94,
+            786
+          ],
+          "area": 1673,
+          "centroid": [
+            58.926479378362224,
+            738.077106993425
+          ]
+        },
+        {
+          "bbox": [
+            163,
+            709,
+            239,
+            798
+          ],
+          "area": 1685,
+          "centroid": [
+            195.73709198813057,
+            758.5192878338279
+          ]
+        },
+        {
+          "bbox": [
+            2,
+            773,
+            247,
+            927
+          ],
+          "area": 8971,
+          "centroid": [
+            123.4168988964441,
+            880.8187493033107
+          ]
+        },
+        {
+          "bbox": [
+            687,
+            945,
+            792,
+            1084
+          ],
+          "area": 6307,
+          "centroid": [
+            738.0334548913905,
+            1019.8362137307753
+          ]
+        },
+        {
+          "bbox": [
+            29,
+            946,
+            161,
+            1088
+          ],
+          "area": 10372,
+          "centroid": [
+            95.52159660624758,
+            1019.0995950636328
+          ]
+        },
+        {
+          "bbox": [
+            435,
+            947,
+            566,
+            1088
+          ],
+          "area": 10250,
+          "centroid": [
+            501.0108292682927,
+            1019.7522926829268
+          ]
+        },
+        {
+          "bbox": [
+            560,
+            949,
+            689,
+            1088
+          ],
+          "area": 9852,
+          "centroid": [
+            625.1808769792935,
+            1019.9685343077548
+          ]
+        },
+        {
+          "bbox": [
+            154,
+            950,
+            283,
+            1087
+          ],
+          "area": 9557,
+          "centroid": [
+            219.54316208015067,
+            1019.7640472951763
+          ]
+        },
+        {
+          "bbox": [
+            844,
+            950,
+            972,
+            1089
+          ],
+          "area": 9793,
+          "centroid": [
+            908.5705095476361,
+            1021.4008986010416
+          ]
+        },
+        {
+          "bbox": [
+            968,
+            950,
+            1093,
+            1089
+          ],
+          "area": 9294,
+          "centroid": [
+            1031.0199053152571,
+            1021.4344738540995
+          ]
+        },
+        {
+          "bbox": [
+            284,
+            951,
+            383,
+            1081
+          ],
+          "area": 5320,
+          "centroid": [
+            333.48815789473684,
+            1015.6695488721805
+          ]
+        },
+        {
+          "bbox": [
+            1094,
+            976,
+            1204,
+            1078
+          ],
+          "area": 4159,
+          "centroid": [
+            1150.7405626352488,
+            1025.9504688627073
+          ]
+        },
+        {
+          "bbox": [
+            7,
+            1084,
+            155,
+            1252
+          ],
+          "area": 12291,
+          "centroid": [
+            80.64421121145554,
+            1183.44333251973
+          ]
+        },
+        {
+          "bbox": [
+            403,
+            1084,
+            820,
+            1252
+          ],
+          "area": 41885,
+          "centroid": [
+            619.5454219887788,
+            1166.6334487286617
+          ]
+        },
+        {
+          "bbox": [
+            811,
+            1084,
+            965,
+            1252
+          ],
+          "area": 14727,
+          "centroid": [
+            885.7148095335099,
+            1175.623752291709
+          ]
+        },
+        {
+          "bbox": [
+            948,
+            1085,
+            1093,
+            1252
+          ],
+          "area": 10559,
+          "centroid": [
+            1020.2287148404205,
+            1160.9738611610949
+          ]
+        },
+        {
+          "bbox": [
+            1077,
+            1085,
+            1215,
+            1253
+          ],
+          "area": 7151,
+          "centroid": [
+            1134.568032443015,
+            1180.6352957628303
+          ]
+        },
+        {
+          "bbox": [
+            136,
+            1089,
+            288,
+            1252
+          ],
+          "area": 10674,
+          "centroid": [
+            204.88382986696647,
+            1158.6036162638186
+          ]
+        },
+        {
+          "bbox": [
+            279,
+            1093,
+            371,
+            1252
+          ],
+          "area": 4373,
+          "centroid": [
+            323.70020580836956,
+            1176.5662016922022
+          ]
+        }
+      ],
+      "saved_paths": [
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_01 AM (2)/panel_00.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_01 AM (2)/panel_01.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_01 AM (2)/panel_02.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_01 AM (2)/panel_03.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_01 AM (2)/panel_04.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_01 AM (2)/panel_05.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_01 AM (2)/panel_06.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_01 AM (2)/panel_07.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_01 AM (2)/panel_08.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_01 AM (2)/panel_09.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_01 AM (2)/panel_10.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_01 AM (2)/panel_11.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_01 AM (2)/panel_12.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_01 AM (2)/panel_13.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_01 AM (2)/panel_14.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_01 AM (2)/panel_15.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_01 AM (2)/panel_16.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_01 AM (2)/panel_17.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_01 AM (2)/panel_18.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_01 AM (2)/panel_19.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_01 AM (2)/panel_20.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_01 AM (2)/panel_21.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_01 AM (2)/panel_22.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_01 AM (2)/panel_23.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_01 AM (2)/panel_24.png"
+      ]
+    },
+    {
+      "source": "Assets/2D/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_02 AM (3).png",
+      "folder": "L4,5,6",
+      "num_panels": 17,
+      "panels": [
+        {
+          "bbox": [
+            150,
+            0,
+            711,
+            446
+          ],
+          "area": 131361,
+          "centroid": [
+            432.7755117576754,
+            171.62399037766156
+          ]
+        },
+        {
+          "bbox": [
+            619,
+            59,
+            734,
+            157
+          ],
+          "area": 3225,
+          "centroid": [
+            680.1581395348837,
+            102.76744186046511
+          ]
+        },
+        {
+          "bbox": [
+            1268,
+            138,
+            1363,
+            225
+          ],
+          "area": 2694,
+          "centroid": [
+            1313.7167780252412,
+            179.0423162583519
+          ]
+        },
+        {
+          "bbox": [
+            827,
+            229,
+            944,
+            319
+          ],
+          "area": 2500,
+          "centroid": [
+            884.2908,
+            279.6088
+          ]
+        },
+        {
+          "bbox": [
+            1371,
+            260,
+            1480,
+            347
+          ],
+          "area": 2737,
+          "centroid": [
+            1433.8045305078554,
+            301.42272561198394
+          ]
+        },
+        {
+          "bbox": [
+            736,
+            300,
+            1167,
+            592
+          ],
+          "area": 33456,
+          "centroid": [
+            966.8734158297465,
+            451.61256575801053
+          ]
+        },
+        {
+          "bbox": [
+            131,
+            366,
+            202,
+            434
+          ],
+          "area": 1543,
+          "centroid": [
+            165.33246921581335,
+            400.0557355800389
+          ]
+        },
+        {
+          "bbox": [
+            1502,
+            509,
+            1587,
+            585
+          ],
+          "area": 2391,
+          "centroid": [
+            1544.0614805520702,
+            545.5855290673359
+          ]
+        },
+        {
+          "bbox": [
+            705,
+            568,
+            1017,
+            770
+          ],
+          "area": 11820,
+          "centroid": [
+            812.4804568527919,
+            669.2695431472081
+          ]
+        },
+        {
+          "bbox": [
+            1299,
+            645,
+            1466,
+            699
+          ],
+          "area": 1734,
+          "centroid": [
+            1365.2525951557093,
+            672.7508650519031
+          ]
+        },
+        {
+          "bbox": [
+            205,
+            660,
+            521,
+            825
+          ],
+          "area": 11359,
+          "centroid": [
+            373.69134606919624,
+            734.4436129941016
+          ]
+        },
+        {
+          "bbox": [
+            1113,
+            699,
+            1286,
+            813
+          ],
+          "area": 3385,
+          "centroid": [
+            1173.1485967503693,
+            759.7004431314623
+          ]
+        },
+        {
+          "bbox": [
+            1271,
+            701,
+            1408,
+            766
+          ],
+          "area": 2036,
+          "centroid": [
+            1329.4179764243615,
+            733.032416502947
+          ]
+        },
+        {
+          "bbox": [
+            203,
+            771,
+            362,
+            861
+          ],
+          "area": 2753,
+          "centroid": [
+            268.85652015982566,
+            808.7900472212132
+          ]
+        },
+        {
+          "bbox": [
+            948,
+            800,
+            1165,
+            888
+          ],
+          "area": 5077,
+          "centroid": [
+            1084.104195390979,
+            843.2647232617687
+          ]
+        },
+        {
+          "bbox": [
+            789,
+            829,
+            916,
+            939
+          ],
+          "area": 5677,
+          "centroid": [
+            843.3921085080148,
+            882.5103047384182
+          ]
+        },
+        {
+          "bbox": [
+            1301,
+            857,
+            1380,
+            933
+          ],
+          "area": 2147,
+          "centroid": [
+            1340.6115510013974,
+            894.4676292501165
+          ]
+        }
+      ],
+      "saved_paths": [
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_02 AM (3)/panel_00.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_02 AM (3)/panel_01.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_02 AM (3)/panel_02.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_02 AM (3)/panel_03.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_02 AM (3)/panel_04.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_02 AM (3)/panel_05.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_02 AM (3)/panel_06.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_02 AM (3)/panel_07.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_02 AM (3)/panel_08.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_02 AM (3)/panel_09.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_02 AM (3)/panel_10.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_02 AM (3)/panel_11.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_02 AM (3)/panel_12.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_02 AM (3)/panel_13.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_02 AM (3)/panel_14.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_02 AM (3)/panel_15.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_02 AM (3)/panel_16.png"
+      ]
+    },
+    {
+      "source": "Assets/2D/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_02 AM (4).png",
+      "folder": "L4,5,6",
+      "num_panels": 6,
+      "panels": [
+        {
+          "bbox": [
+            635,
+            3,
+            1122,
+            481
+          ],
+          "area": 50974,
+          "centroid": [
+            836.5756071722839,
+            268.947502648409
+          ]
+        },
+        {
+          "bbox": [
+            19,
+            29,
+            643,
+            533
+          ],
+          "area": 63512,
+          "centroid": [
+            330.42864340597055,
+            228.52363332913464
+          ]
+        },
+        {
+          "bbox": [
+            608,
+            462,
+            1242,
+            943
+          ],
+          "area": 60761,
+          "centroid": [
+            913.3930152564967,
+            695.9564194137687
+          ]
+        },
+        {
+          "bbox": [
+            5,
+            572,
+            657,
+            943
+          ],
+          "area": 52030,
+          "centroid": [
+            330.2382279454161,
+            706.7214876033058
+          ]
+        },
+        {
+          "bbox": [
+            21,
+            1000,
+            623,
+            1225
+          ],
+          "area": 74945,
+          "centroid": [
+            376.5396490759891,
+            1099.8226299286143
+          ]
+        },
+        {
+          "bbox": [
+            640,
+            1054,
+            1246,
+            1188
+          ],
+          "area": 37301,
+          "centroid": [
+            888.6634942762929,
+            1121.1949277499264
+          ]
+        }
+      ],
+      "saved_paths": [
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_02 AM (4)/panel_00.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_02 AM (4)/panel_01.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_02 AM (4)/panel_02.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_02 AM (4)/panel_03.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_02 AM (4)/panel_04.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_02 AM (4)/panel_05.png"
+      ]
+    },
+    {
+      "source": "Assets/2D/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_02 AM (5).png",
+      "folder": "L4,5,6",
+      "num_panels": 16,
+      "panels": [
+        {
+          "bbox": [
+            67,
+            14,
+            587,
+            262
+          ],
+          "area": 44169,
+          "centroid": [
+            304.6320722678802,
+            160.8736217709253
+          ]
+        },
+        {
+          "bbox": [
+            644,
+            34,
+            1196,
+            284
+          ],
+          "area": 63416,
+          "centroid": [
+            915.9367509776713,
+            167.9363252176107
+          ]
+        },
+        {
+          "bbox": [
+            430,
+            299,
+            763,
+            491
+          ],
+          "area": 24359,
+          "centroid": [
+            606.3586354119627,
+            409.28703969785295
+          ]
+        },
+        {
+          "bbox": [
+            32,
+            311,
+            403,
+            497
+          ],
+          "area": 25113,
+          "centroid": [
+            233.18341098235973,
+            414.3215466093258
+          ]
+        },
+        {
+          "bbox": [
+            782,
+            324,
+            1203,
+            501
+          ],
+          "area": 35903,
+          "centroid": [
+            981.9298108793137,
+            414.91694287385457
+          ]
+        },
+        {
+          "bbox": [
+            848,
+            519,
+            1227,
+            724
+          ],
+          "area": 31898,
+          "centroid": [
+            1040.4320647062511,
+            630.9556398520283
+          ]
+        },
+        {
+          "bbox": [
+            96,
+            520,
+            384,
+            716
+          ],
+          "area": 23137,
+          "centroid": [
+            226.18321303539784,
+            625.9784328132429
+          ]
+        },
+        {
+          "bbox": [
+            481,
+            526,
+            812,
+            695
+          ],
+          "area": 22616,
+          "centroid": [
+            622.6739034311992,
+            615.7218340997524
+          ]
+        },
+        {
+          "bbox": [
+            1156,
+            739,
+            1218,
+            869
+          ],
+          "area": 1691,
+          "centroid": [
+            1185.3134240094619,
+            802.5369603784743
+          ]
+        },
+        {
+          "bbox": [
+            28,
+            740,
+            108,
+            850
+          ],
+          "area": 1892,
+          "centroid": [
+            71.4561310782241,
+            791.4497885835095
+          ]
+        },
+        {
+          "bbox": [
+            102,
+            743,
+            210,
+            860
+          ],
+          "area": 1569,
+          "centroid": [
+            162.0082855321861,
+            795.8011472275334
+          ]
+        },
+        {
+          "bbox": [
+            496,
+            751,
+            585,
+            873
+          ],
+          "area": 1710,
+          "centroid": [
+            541.2742690058479,
+            813.4438596491228
+          ]
+        },
+        {
+          "bbox": [
+            784,
+            886,
+            865,
+            1016
+          ],
+          "area": 1631,
+          "centroid": [
+            818.2286940527284,
+            950.5027590435316
+          ]
+        },
+        {
+          "bbox": [
+            522,
+            887,
+            584,
+            1025
+          ],
+          "area": 1501,
+          "centroid": [
+            556.6528980679547,
+            958.5403064623584
+          ]
+        },
+        {
+          "bbox": [
+            326,
+            1030,
+            448,
+            1105
+          ],
+          "area": 1517,
+          "centroid": [
+            383.31641397495054,
+            1056.9314436387608
+          ]
+        },
+        {
+          "bbox": [
+            768,
+            1030,
+            944,
+            1096
+          ],
+          "area": 2154,
+          "centroid": [
+            844.3152274837512,
+            1053.3904363974002
+          ]
+        }
+      ],
+      "saved_paths": [
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_02 AM (5)/panel_00.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_02 AM (5)/panel_01.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_02 AM (5)/panel_02.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_02 AM (5)/panel_03.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_02 AM (5)/panel_04.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_02 AM (5)/panel_05.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_02 AM (5)/panel_06.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_02 AM (5)/panel_07.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_02 AM (5)/panel_08.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_02 AM (5)/panel_09.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_02 AM (5)/panel_10.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_02 AM (5)/panel_11.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_02 AM (5)/panel_12.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_02 AM (5)/panel_13.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_02 AM (5)/panel_14.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_02 AM (5)/panel_15.png"
+      ]
+    },
+    {
+      "source": "Assets/2D/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_02 AM (6).png",
+      "folder": "L4,5,6",
+      "num_panels": 2,
+      "panels": [
+        {
+          "bbox": [
+            4,
+            0,
+            1672,
+            941
+          ],
+          "area": 803071,
+          "centroid": [
+            948.8224764684567,
+            480.7166253046119
+          ]
+        },
+        {
+          "bbox": [
+            83,
+            464,
+            204,
+            576
+          ],
+          "area": 3720,
+          "centroid": [
+            143.73306451612902,
+            517.3354838709678
+          ]
+        }
+      ],
+      "saved_paths": [
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_02 AM (6)/panel_00.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_02 AM (6)/panel_01.png"
+      ]
+    },
+    {
+      "source": "Assets/2D/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_02 AM (7).png",
+      "folder": "L4,5,6",
+      "num_panels": 6,
+      "panels": [
+        {
+          "bbox": [
+            753,
+            514,
+            1254,
+            747
+          ],
+          "area": 80929,
+          "centroid": [
+            1010.5379653770589,
+            629.3350096998604
+          ]
+        },
+        {
+          "bbox": [
+            574,
+            521,
+            742,
+            741
+          ],
+          "area": 13587,
+          "centroid": [
+            668.4156914697872,
+            638.2260984764848
+          ]
+        },
+        {
+          "bbox": [
+            432,
+            534,
+            545,
+            722
+          ],
+          "area": 5923,
+          "centroid": [
+            498.0628060104677,
+            629.9988181664697
+          ]
+        },
+        {
+          "bbox": [
+            303,
+            542,
+            417,
+            713
+          ],
+          "area": 7918,
+          "centroid": [
+            360.3983329123516,
+            629.0503915130083
+          ]
+        },
+        {
+          "bbox": [
+            132,
+            557,
+            261,
+            706
+          ],
+          "area": 8810,
+          "centroid": [
+            196.32951191827468,
+            630.5793416572077
+          ]
+        },
+        {
+          "bbox": [
+            26,
+            587,
+            114,
+            677
+          ],
+          "area": 2933,
+          "centroid": [
+            70.06989430617115,
+            630.1905898397545
+          ]
+        }
+      ],
+      "saved_paths": [
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_02 AM (7)/panel_00.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_02 AM (7)/panel_01.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_02 AM (7)/panel_02.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_02 AM (7)/panel_03.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_02 AM (7)/panel_04.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_02 AM (7)/panel_05.png"
+      ]
+    },
+    {
+      "source": "Assets/2D/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_03 AM (8).png",
+      "folder": "L4,5,6",
+      "num_panels": 3,
+      "panels": [
+        {
+          "bbox": [
+            82,
+            42,
+            1163,
+            664
+          ],
+          "area": 251218,
+          "centroid": [
+            612.2103631109236,
+            469.71318934152805
+          ]
+        },
+        {
+          "bbox": [
+            646,
+            680,
+            1242,
+            1196
+          ],
+          "area": 139329,
+          "centroid": [
+            938.216803393407,
+            1022.537741604404
+          ]
+        },
+        {
+          "bbox": [
+            28,
+            694,
+            595,
+            1196
+          ],
+          "area": 118901,
+          "centroid": [
+            316.5519297566883,
+            1022.2287449222463
+          ]
+        }
+      ],
+      "saved_paths": [
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_03 AM (8)/panel_00.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_03 AM (8)/panel_01.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_03 AM (8)/panel_02.png"
+      ]
+    },
+    {
+      "source": "Assets/2D/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_03 AM (9).png",
+      "folder": "L4,5,6",
+      "num_panels": 16,
+      "panels": [
+        {
+          "bbox": [
+            20,
+            33,
+            419,
+            221
+          ],
+          "area": 24930,
+          "centroid": [
+            206.1401925391095,
+            132.09189731247494
+          ]
+        },
+        {
+          "bbox": [
+            461,
+            41,
+            831,
+            226
+          ],
+          "area": 30516,
+          "centroid": [
+            648.7050072093328,
+            132.32969589723425
+          ]
+        },
+        {
+          "bbox": [
+            863,
+            64,
+            1246,
+            234
+          ],
+          "area": 30653,
+          "centroid": [
+            1052.1314063876293,
+            151.2031448797834
+          ]
+        },
+        {
+          "bbox": [
+            25,
+            226,
+            384,
+            398
+          ],
+          "area": 22583,
+          "centroid": [
+            184.09485010848869,
+            322.6438028605588
+          ]
+        },
+        {
+          "bbox": [
+            457,
+            246,
+            830,
+            413
+          ],
+          "area": 29113,
+          "centroid": [
+            640.1571462920344,
+            330.830900285096
+          ]
+        },
+        {
+          "bbox": [
+            877,
+            266,
+            1225,
+            407
+          ],
+          "area": 19947,
+          "centroid": [
+            1064.6777460269714,
+            336.3544893969018
+          ]
+        },
+        {
+          "bbox": [
+            24,
+            416,
+            339,
+            526
+          ],
+          "area": 11567,
+          "centroid": [
+            161.8900319875508,
+            470.3624967580185
+          ]
+        },
+        {
+          "bbox": [
+            866,
+            421,
+            1205,
+            537
+          ],
+          "area": 14670,
+          "centroid": [
+            1028.2930470347649,
+            480.56550783912746
+          ]
+        },
+        {
+          "bbox": [
+            453,
+            425,
+            805,
+            534
+          ],
+          "area": 11771,
+          "centroid": [
+            628.1287061422139,
+            483.7839605810891
+          ]
+        },
+        {
+          "bbox": [
+            249,
+            458,
+            402,
+            526
+          ],
+          "area": 1550,
+          "centroid": [
+            329.94709677419354,
+            488.43032258064517
+          ]
+        },
+        {
+          "bbox": [
+            894,
+            924,
+            1146,
+            1041
+          ],
+          "area": 9613,
+          "centroid": [
+            1012.7065432227192,
+            983.7166337251639
+          ]
+        },
+        {
+          "bbox": [
+            60,
+            932,
+            349,
+            1033
+          ],
+          "area": 7355,
+          "centroid": [
+            206.45533650577838,
+            982.3169272603672
+          ]
+        },
+        {
+          "bbox": [
+            472,
+            939,
+            779,
+            1036
+          ],
+          "area": 8229,
+          "centroid": [
+            610.4753919066716,
+            989.6511119212541
+          ]
+        },
+        {
+          "bbox": [
+            60,
+            1053,
+            351,
+            1176
+          ],
+          "area": 12002,
+          "centroid": [
+            200.75270788201965,
+            1116.0199966672221
+          ]
+        },
+        {
+          "bbox": [
+            449,
+            1072,
+            768,
+            1208
+          ],
+          "area": 12501,
+          "centroid": [
+            590.1774258059355,
+            1135.026717862571
+          ]
+        },
+        {
+          "bbox": [
+            878,
+            1077,
+            1170,
+            1195
+          ],
+          "area": 12078,
+          "centroid": [
+            1017.4921344593475,
+            1135.0605232654414
+          ]
+        }
+      ],
+      "saved_paths": [
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_03 AM (9)/panel_00.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_03 AM (9)/panel_01.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_03 AM (9)/panel_02.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_03 AM (9)/panel_03.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_03 AM (9)/panel_04.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_03 AM (9)/panel_05.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_03 AM (9)/panel_06.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_03 AM (9)/panel_07.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_03 AM (9)/panel_08.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_03 AM (9)/panel_09.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_03 AM (9)/panel_10.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_03 AM (9)/panel_11.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_03 AM (9)/panel_12.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_03 AM (9)/panel_13.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_03 AM (9)/panel_14.png",
+        "Assets/2D_split/L4,5,6/ChatGPT Image Apr 23, 2026, 11_50_03 AM (9)/panel_15.png"
+      ]
+    }
+  ]
+}
