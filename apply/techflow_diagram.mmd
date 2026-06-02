@@ -1,0 +1,27 @@
+graph LR
+    subgraph P1["阶段一：视觉原型验证 ✅"]
+        V1["Vite + TypeScript<br/>Canvas 2D"]
+        V2["六关卡视觉渲染"]
+        V3["SSVEP亮度调制<br/>55–100%正弦波"]
+        V4["Debug注意力模拟"]
+    end
+    subgraph P2["阶段二：SSVEP闭环集成 🔄"]
+        E1["Web Bluetooth<br/>EEG头环接入"]
+        E2["BrainFlow WASM<br/>信号预处理"]
+        E3["CCA算法<br/>SSVEP频率检测"]
+        E4["注意力指数→<br/>场景反馈闭环"]
+    end
+    subgraph P3["阶段三：原生平台迁移 📋"]
+        N1["Metal API<br/>VSync精确渲染"]
+        N2["SwiftUI<br/>原生UI框架"]
+        N3["BrainFlow C++<br/>实时信号处理"]
+        N4["临床级SSVEP<br/>亚毫秒精度"]
+    end
+
+    V1 --> V2 --> V3 --> V4
+    V4 --> E1 --> E2 --> E3 --> E4
+    E4 --> N1 --> N2 --> N3 --> N4
+
+    style P1 fill:#E8F5E9,stroke:#4CAF50,color:#2E7D32
+    style P2 fill:#FFF3E0,stroke:#FF9800,color:#E65100
+    style P3 fill:#E3F2FD,stroke:#2196F3,color:#1565C0

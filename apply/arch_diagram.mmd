@@ -1,0 +1,39 @@
+graph TB
+    subgraph SIG["信号采集层"]
+        EEG["华南脑控五通道EEG头环<br/>O1·O2·C3·C4·Fp"]
+        BT["蓝牙5.0"]
+    end
+    subgraph PROC["信号处理层"]
+        BPF["带通滤波 5–50 Hz"]
+        ICA["ICA去伪迹"]
+        FFT["CCA频率检测"]
+        AI["注意力指数计算<br/>AI = P_tgt / P_tgt+P_dist"]
+    end
+    subgraph RENDER["场景渲染层"]
+        SSVEP["SSVEP亮度调制<br/>55–100% sin波"]
+        NF["注意力驱动反馈<br/>花开·雾散·星明"]
+        LV["六关卡渲染引擎"]
+    end
+    subgraph UX["用户交互层"]
+        SEL["关卡选择与标定"]
+        TIMER["训练计时"]
+        GUIDE["正念引导语"]
+    end
+
+    EEG --> BT --> BPF
+    BPF --> ICA --> FFT --> AI
+    AI --> SSVEP
+    AI --> NF
+    SSVEP --> LV
+    NF --> LV
+    SEL --> LV
+    TIMER --> LV
+    GUIDE --> LV
+    LV -->|视觉场景| USER["用户注视"]
+    USER -->|SSVEP响应| EEG
+
+    style SIG fill:#E8F4FD,stroke:#2196F3,color:#1565C0
+    style PROC fill:#FFF3E0,stroke:#FF9800,color:#E65100
+    style RENDER fill:#E8F5E9,stroke:#4CAF50,color:#2E7D32
+    style UX fill:#F3E5F5,stroke:#9C27B0,color:#6A1B9A
+    style USER fill:#FFEBEE,stroke:#F44336,color:#C62828
