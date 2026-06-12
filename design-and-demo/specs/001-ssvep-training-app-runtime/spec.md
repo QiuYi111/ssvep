@@ -1,0 +1,792 @@
+# 功能规格说明书 v0.2：SSVEP 注意力训练应用运行时
+
+![1780378835624](image/spec/1780378835624.png)
+
+## 0. 文档状态
+
+本文档包含：
+
+* 视频负责复杂视觉美感。
+* WebGL 负责精确 SSVEP 目标、干扰物、调试遮罩和刺激时序。
+* 关卡控制器只消费标准化神经反馈帧，并输出视觉指令。
+* 首个里程碑只完成 L1「涟漪绽放」端到端垂直切片。
+* M1/M2 边界。
+* NeuroFrame 数据结构。
+* L1 状态机。
+* 视频资源包结构与坐标系统。
+* WebGL SSVEP 时序与遥测。
+* 遥测事件格式。
+* 开发模式与训练模式。
+* 第一周验收门槛。
+
+---
+
+## 1. 里程碑边界
+
+### 1.1 M1-core：L1 浏览器垂直切片
+
+M1-core 是首个必须完成的交付范围。M1-core 不依赖真实 HybridBCI，不依赖 Tauri 打包成功，不依赖 L2-L6。
+
+M1-core 必须完成：
+
+1. Vite / TypeScript 浏览器运行时可以启动 L1。
+2. L1 资源包通过 `level.json` 加载。
+3. 视频层加载并播放四个片段：
+   * `closed_loop.mp4`
+   * `opening_transition.mp4`
+   * `open_loop.mp4`
+   * `closing_transition.mp4`
+4. WebGL 透明叠加层独立渲染固定 15Hz 花心目标。
+5. 目标位置、半径、频率、颜色、透明度范围由配置驱动。
+6. 调试遮罩可以显示目标区域，并与视频花心对齐。
+7. 模拟 NeuroFrame 源可以驱动 L1 状态机。
+8. `bloomProgress` 在高注意力下上升，在低注意力下下降，信号丢失时暂停惩罚。
+9. 运行时记录遥测：神经帧、状态切换、视频事件、rAF 帧间隔、目标相位/透明度。
+10. 缺失资源或无效配置会产生明确的开发者错误。
+
+### 1.2 M1-desktop：Tauri 外壳
+
+M1-desktop 是 M1-core 的桌面壳包装。若 Tauri 配置阻碍 L1 进度，则不得阻塞 M1-core。
+
+M1-desktop 应完成：
+
+1. Tauri 开发模式可以打开同一套 Vite 运行时。
+2. 本地资源路径在 Tauri 中正确解析。
+3. 基础窗口尺寸、全屏/退出路径可用。
+
+### 1.3 M2：Bridge 数据集成
+
+M2 才要求真实 bridge-server 数据接入。M1 只要求保留 bridge adapter stub 和日志接口。
+
+M2 必须完成：
+
+1. 应用连接 bridge-server WebSocket。
+2. 原始 bridge 消息被记录。
+3. bridge 消息被映射为标准化 `NeuroFrame`。
+4. L1 可以从真实 bridge 数据或模拟数据切换运行。
+5. bridge 断连、超时或信号不可用时，运行时标记 `signalQuality="lost"`，不得将其判定为用户分心。
+
+### 1.4 M3 及以后
+
+L2-L6 属于 M3/M4，不作为 M1 验收条件。M1 未稳定前，不得进入 L2-L6 的完整实现。
+
+---
+
+## 2. 架构不变量
+
+以下规则在所有关卡中必须成立：
+
+1. 视频层不得包含真正的 SSVEP 频率闪烁。
+2. SSVEP 目标、干扰物、调试遮罩必须由 WebGL 层生成。
+3. 视频播放状态不得决定 SSVEP 目标的时序。
+4. WebGL 刺激时序必须基于 `performance.now()` 或等价单调时间源计算。
+5. 关卡控制器不得直接操作 Three.js 对象。
+6. BCI / bridge 适配器不得直接操作视觉元素。
+7. 视频层只接受视频片段切换、转场和播放控制指令。
+8. WebGL 层只接受目标配置、显示强度、调试开关和刺激参数。
+9. 所有进入关卡控制器的神经反馈必须先标准化为 `NeuroFrame`。
+10. 所有可审查行为必须通过 telemetry 记录。
+
+---
+
+## 3. 坐标系统契约
+
+### 3.1 配置坐标
+
+关卡配置中的目标坐标使用归一化视频坐标，基于视频原始帧的自然尺寸，而不是浏览器窗口尺寸。
+
+```ts
+export interface NormalizedVideoPoint {
+  /** 0-1, relative to natural video frame width */
+  x: number;
+  /** 0-1, relative to natural video frame height */
+  y: number;
+}
+```
+
+例如：
+
+```json
+{
+  "target": {
+    "x": 0.5,
+    "y": 0.52,
+    "radius": 0.035
+  }
+}
+```
+
+其中：
+
+* `x=0` 表示视频原始帧最左侧。
+* `x=1` 表示视频原始帧最右侧。
+* `y=0` 表示视频原始帧顶部。
+* `y=1` 表示视频原始帧底部。
+* `radius` 使用视频原始帧较短边的归一化比例。
+
+### 3.2 渲染坐标映射
+
+运行时必须根据 video 元素的实际显示区域，将归一化视频坐标映射为 overlay canvas 中的 CSS 像素坐标。
+
+```ts
+export interface RenderedTargetRect {
+  cssX: number;
+  cssY: number;
+  cssRadius: number;
+  devicePixelRatio: number;
+  videoRenderRect: {
+    left: number;
+    top: number;
+    width: number;
+    height: number;
+  };
+}
+```
+
+### 3.3 `object-fit` 规则
+
+M1 默认使用：
+
+```css
+video {
+  object-fit: contain;
+}
+```
+
+原因：`contain` 不裁切视频，有利于调试目标坐标。若未来改为 `cover`，必须同步更新坐标映射函数和测试。
+
+### 3.4 验收要求
+
+1. 调试遮罩必须使用与 WebGL 目标相同的坐标映射函数。
+2. 改变窗口尺寸后，遮罩仍覆盖同一视频内容区域。
+3. 高 DPR 屏幕上，视觉尺寸和点击/调试坐标不得错位。
+4. 视频暂停时，遮罩位置不得漂移。
+
+---
+
+## 4. 关卡资源包契约
+
+### 4.1 L1 目录结构
+
+```text
+web-prototype/public/levels/l1/
+  level.json
+  asset-notes.md
+  videos/
+    closed_loop.mp4
+    opening_transition.mp4
+    open_loop.mp4
+    closing_transition.mp4
+  review/
+    closed_loop_start.png
+    closed_loop_end.png
+    opening_transition_start.png
+    opening_transition_end.png
+    open_loop_start.png
+    open_loop_end.png
+    closing_transition_start.png
+    closing_transition_end.png
+```
+
+### 4.2 `level.json` 示例
+
+```json
+{
+  "schemaVersion": "1.0",
+  "id": "l1",
+  "name": "涟漪绽放",
+  "videoSpec": {
+    "naturalWidth": 1920,
+    "naturalHeight": 1080,
+    "expectedFps": 24,
+    "objectFit": "contain",
+    "codec": "h264",
+    "container": "mp4"
+  },
+  "videos": {
+    "closedLoop": "videos/closed_loop.mp4",
+    "openingTransition": "videos/opening_transition.mp4",
+    "openLoop": "videos/open_loop.mp4",
+    "closingTransition": "videos/closing_transition.mp4"
+  },
+  "target": {
+    "x": 0.5,
+    "y": 0.52,
+    "radius": 0.035,
+    "frequencyHz": 15,
+    "color": "#ffe9a6",
+    "opacityMin": 0.6,
+    "opacityMax": 1.0,
+    "modulation": "smooth_sine"
+  },
+  "controller": {
+    "attentionHighThreshold": 0.65,
+    "attentionLowThreshold": 0.45,
+    "dwellTimeMs": 2000,
+    "bloomRisePerSecond": 0.25,
+    "bloomFallPerSecond": 0.20,
+    "signalLostTimeoutMs": 1000
+  },
+  "debug": {
+    "showMaskByDefault": false,
+    "showTelemetryByDefault": true
+  }
+}
+```
+
+### 4.3 `asset-notes.md` 必须包含
+
+每个视频资源必须记录：
+
+1. 文件名。
+2. 生成日期。
+3. 生成工具或管线。
+4. prompt / reference。
+5. 起始状态描述。
+6. 结束状态描述。
+7. 花心目标是否稳定。
+8. 是否存在意外闪烁。
+9. 是否可循环。
+10. 已知问题。
+11. 审查人和审查日期。
+
+### 4.4 资源错误处理
+
+缺失资源不得静默回退。运行时必须显示开发者错误，例如：
+
+```text
+LevelResourceError: l1 missing videos/opening_transition.mp4
+```
+
+---
+
+## 5. NeuroFrame 标准化契约
+
+### 5.1 类型定义
+
+```ts
+export type NeuroSource = "mock" | "bridge";
+
+export type SignalQuality = "good" | "poor" | "lost" | "unknown";
+
+export interface NeuroFrame {
+  /** Monotonic timestamp generated by runtime when the frame is accepted. */
+  timestampMs: number;
+
+  /** Data source. */
+  source: NeuroSource;
+
+  /** Standardized attention score, 0-1. Null means unavailable, not distracted. */
+  attention: number | null;
+
+  /** Signal state. Lost signal must not be treated as low attention. */
+  signalQuality: SignalQuality;
+
+  /** Optional confidence of the attention estimate, 0-1. */
+  confidence?: number;
+
+  /** Optional target frequency response, e.g. 15Hz response. */
+  targetPower?: number;
+
+  /** Optional distractor frequency response, e.g. 20Hz response. */
+  distractorPower?: number;
+
+  /** Development-only raw payload. Must not be required by level logic. */
+  raw?: unknown;
+}
+```
+
+### 5.2 语义规则
+
+1. `attention=null` 表示当前没有可用注意力估计。
+2. `signalQuality="lost"` 时，关卡不得下降进度。
+3. `signalQuality="poor"` 时，M1 默认暂停进度变化；未来可以配置不同策略。
+4. 只有 `signalQuality="good"` 且 `attention` 为数值时，L1 才允许根据注意力升降 `bloomProgress`。
+5. bridge 原始字段不得直接进入关卡控制器。
+6. mock source 必须支持确定性模式，方便复现测试。
+
+### 5.3 Bridge adapter stub
+
+M1 中必须有 bridge adapter stub，但不要求真实 bridge-server 可用。
+
+```ts
+export interface NeuroSourceClient {
+  start(): void;
+  stop(): void;
+  subscribe(listener: (frame: NeuroFrame) => void): () => void;
+}
+```
+
+---
+
+## 6. L1 状态机契约
+
+### 6.1 状态定义
+
+```ts
+export type L1VisualState =
+  | "closed_loop"
+  | "opening_transition"
+  | "open_loop"
+  | "closing_transition";
+```
+
+### 6.2 控制变量
+
+```ts
+export interface L1ControllerState {
+  visualState: L1VisualState;
+  bloomProgress: number; // 0-1
+  highAttentionDwellMs: number;
+  lowAttentionDwellMs: number;
+  signalAvailable: boolean;
+  currentVideoSegment: string;
+}
+```
+
+### 6.3 状态转换表
+
+| 当前状态               | 条件                                                                        | 下一个状态             | 动作                            |
+| ---------------------- | --------------------------------------------------------------------------- | ---------------------- | ------------------------------- |
+| `closed_loop`        | `signalQuality=good`且 `attention >= highThreshold`持续 `dwellTimeMs` | `opening_transition` | 播放 `opening_transition.mp4` |
+| `opening_transition` | 视频播放结束                                                                | `open_loop`          | 播放 `open_loop.mp4`循环      |
+| `open_loop`          | `signalQuality=good`且 `attention <= lowThreshold`持续 `dwellTimeMs`  | `closing_transition` | 播放 `closing_transition.mp4` |
+| `closing_transition` | 视频播放结束                                                                | `closed_loop`        | 播放 `closed_loop.mp4`循环    |
+| 任意状态               | `signalQuality=lost`或超时                                                | 当前状态不变           | 暂停进度惩罚，记录 signal_lost  |
+
+### 6.4 Transition 打断策略
+
+M1 采用最简单策略： **转场片段不被打断** 。
+
+* `opening_transition` 播放期间，即使注意力下降，也不立即切到 closing。
+* `closing_transition` 播放期间，即使注意力上升，也不立即切到 opening。
+* 转场结束后，再根据当前注意力重新累计 dwell time。
+
+原因：M1 优先保证视觉稳定和状态可解释性，避免视频频繁来回切换。
+
+### 6.5 `bloomProgress` 更新规则
+
+```text
+if signalQuality is lost/poor:
+  bloomProgress unchanged
+else if attention >= highThreshold:
+  bloomProgress += bloomRisePerSecond * dt
+else if attention <= lowThreshold:
+  bloomProgress -= bloomFallPerSecond * dt
+else:
+  bloomProgress unchanged
+
+bloomProgress is clamped to [0, 1].
+```
+
+### 6.6 输出视觉指令
+
+L1Controller 不直接渲染，只输出：
+
+```ts
+export interface L1VisualCommand {
+  videoSegment: "closedLoop" | "openingTransition" | "openLoop" | "closingTransition";
+  overlayTargetVisible: boolean;
+  overlayIntensity: number; // 0-1, may follow bloomProgress
+  debugMaskVisible: boolean;
+  bloomProgress: number;
+}
+```
+
+---
+
+## 7. Video Environment Controller 契约
+
+```ts
+export type VideoSegmentKey =
+  | "closedLoop"
+  | "openingTransition"
+  | "openLoop"
+  | "closingTransition";
+
+export interface VideoEnvironmentController {
+  loadLevel(levelConfig: LevelConfig): Promise<void>;
+  playSegment(segment: VideoSegmentKey, options: { loop: boolean }): Promise<void>;
+  pause(): void;
+  resume(): void;
+  getCurrentSegment(): VideoSegmentKey | null;
+  onEvent(listener: (event: VideoTelemetryEvent) => void): () => void;
+}
+```
+
+视频控制器必须发出以下事件：
+
+```ts
+export type VideoTelemetryEvent =
+  | { type: "video_load_start"; segment: VideoSegmentKey; timestampMs: number }
+  | { type: "video_load_success"; segment: VideoSegmentKey; timestampMs: number }
+  | { type: "video_play"; segment: VideoSegmentKey; timestampMs: number }
+  | { type: "video_ended"; segment: VideoSegmentKey; timestampMs: number }
+  | { type: "video_error"; segment: VideoSegmentKey; timestampMs: number; message: string };
+```
+
+---
+
+## 8. WebGL SSVEP Overlay 契约
+
+### 8.1 目标配置
+
+```ts
+export interface SSVEPStimulusConfig {
+  frequencyHz: number;
+  opacityMin: number;
+  opacityMax: number;
+  color: string;
+  radius: number;
+  modulation: "smooth_sine";
+}
+```
+
+### 8.2 透明度调制
+
+M1 使用平滑正弦调制，不使用硬方波。
+
+```ts
+const phase = (timeSeconds * frequencyHz) % 1;
+const wave = 0.5 + 0.5 * Math.sin(2 * Math.PI * phase);
+const opacity = opacityMin + wave * (opacityMax - opacityMin);
+```
+
+### 8.3 时序要求
+
+1. WebGL 叠加层必须在 `requestAnimationFrame` 中独立渲染。
+2. 透明度计算必须基于单调时间，不得基于视频帧号。
+3. 视频暂停时，SSVEP 目标仍应继续按当前时间渲染，除非训练运行时显式暂停 overlay。
+4. M1 只记录软件时序，不声称临床级刺激精度。
+5. 正式实验前必须使用光电二极管或高速相机外部验证实际频率。
+
+### 8.4 刷新率说明
+
+M1 支持 60Hz 或更高显示器，但必须记录显示器下的 rAF 间隔。
+
+应注意：
+
+* 60Hz 下，15Hz 为 4 帧/周期，20Hz 为 3 帧/周期。
+* 120Hz 下，15Hz 为 8 帧/周期，20Hz 为 6 帧/周期。
+* 144Hz 下，15Hz 和 20Hz 都不是整数帧周期，实际采样形态需要记录和验证。
+
+---
+
+## 9. 遥测事件契约
+
+M1 必须记录 JSONL 格式 telemetry。每行一个事件。
+
+```ts
+export type TelemetryEvent =
+  | SessionStartEvent
+  | SessionEndEvent
+  | NeuroFrameEvent
+  | L1StateTransitionEvent
+  | VideoTelemetryEvent
+  | StimulusFrameEvent
+  | RuntimeErrorEvent;
+
+export interface SessionStartEvent {
+  type: "session_start";
+  timestampMs: number;
+  levelId: string;
+  runtimeMode: "training" | "developer";
+}
+
+export interface SessionEndEvent {
+  type: "session_end";
+  timestampMs: number;
+  levelId: string;
+  durationMs: number;
+}
+
+export interface NeuroFrameEvent {
+  type: "neuro_frame";
+  timestampMs: number;
+  frame: NeuroFrame;
+}
+
+export interface L1StateTransitionEvent {
+  type: "l1_state_transition";
+  timestampMs: number;
+  from: L1VisualState;
+  to: L1VisualState;
+  reason: string;
+  bloomProgress: number;
+}
+
+export interface StimulusFrameEvent {
+  type: "stimulus_frame";
+  timestampMs: number;
+  targetFrequencyHz: number;
+  phase: number;
+  opacity: number;
+  rafDeltaMs: number;
+  droppedFrameEstimate: boolean;
+  videoSegment: string;
+  l1State: L1VisualState;
+}
+
+export interface RuntimeErrorEvent {
+  type: "runtime_error";
+  timestampMs: number;
+  code: string;
+  message: string;
+  context?: unknown;
+}
+```
+
+### 9.1 遥测采样要求
+
+1. `neuro_frame`：每个输入帧都记录。
+2. `l1_state_transition`：每次状态变化记录。
+3. `video_*`：每次视频加载、播放、结束、错误记录。
+4. `stimulus_frame`：开发模式可每帧记录；训练模式可降采样，例如每秒 10 条。
+5. 5 分钟 L1 模拟会话后，必须能通过 telemetry 还原状态变化和视频切换过程。
+
+---
+
+## 10. 运行模式
+
+```ts
+export type RuntimeMode = "training" | "developer";
+```
+
+### 10.1 Training mode
+
+面向正式训练或演示：
+
+* 隐藏注意力滑块。
+* 隐藏调试遮罩。
+* 隐藏内部遥测面板。
+* 保留暂停、退出、全屏控制。
+* 继续后台记录必要 telemetry。
+
+### 10.2 Developer mode
+
+面向开发和验收：
+
+* 显示模拟注意力滑块。
+* 显示 signal quality 开关。
+* 显示调试遮罩开关。
+* 显示当前视频片段。
+* 显示当前 L1 状态。
+* 显示 `bloomProgress`。
+* 显示目标坐标、半径、频率、当前透明度。
+* 显示 FPS / rAF delta / dropped frame estimate。
+
+---
+
+## 11. L1 验收测试
+
+### 11.1 US-001：模拟注意力驱动 L1
+
+步骤：
+
+1. 启动 Vite 应用。
+2. 进入 L1。
+3. 确认 `closed_loop.mp4` 循环播放。
+4. 开启 developer mode。
+5. 将模拟注意力升至 high threshold 以上并保持 2 秒。
+6. 确认进入 `opening_transition`。
+7. 确认转场结束后进入 `open_loop`。
+8. 将模拟注意力降至 low threshold 以下并保持 2 秒。
+9. 确认进入 `closing_transition`。
+10. 确认转场结束后回到 `closed_loop`。
+11. 检查 telemetry 中存在对应的 neuro_frame、state_transition 和 video_event。
+
+通过标准：
+
+* 状态转换与状态机表一致。
+* 视频片段与状态一致。
+* `bloomProgress` 在高注意力时上升，低注意力时下降。
+* 转场片段不被中途打断。
+
+### 11.2 US-002：WebGL 与视频分离
+
+步骤：
+
+1. 运行 L1。
+2. 开启调试遮罩。
+3. 暂停视频层。
+4. 确认 WebGL 目标仍按 15Hz 配置继续渲染。
+5. 替换视频或切换视频片段。
+6. 确认 overlay 时序不依赖视频播放状态。
+
+通过标准：
+
+* WebGL 目标不嵌入视频。
+* overlay 使用 `requestAnimationFrame` 独立渲染。
+* telemetry 中可以看到 stimulus frame 的 phase/opacity 继续变化。
+
+### 11.3 US-003：信号丢失不等于分心
+
+步骤：
+
+1. 运行 L1 到 `open_loop`。
+2. 将 signal quality 切换为 `lost`。
+3. 保持 5 秒。
+4. 确认 `bloomProgress` 不下降。
+5. 恢复 signal quality 为 `good`。
+6. 将 attention 降低至 low threshold 以下。
+7. 确认 dwell time 满足后才进入 closing。
+
+通过标准：
+
+* lost signal 期间不惩罚用户。
+* 恢复后重新根据 attention 判定。
+
+### 11.4 US-004：目标对齐
+
+步骤：
+
+1. 开启 L1 developer mode。
+2. 显示 debug mask。
+3. 改变窗口大小。
+4. 切换全屏。
+5. 暂停视频。
+6. 检查遮罩是否仍覆盖花心目标区域。
+
+通过标准：
+
+* 遮罩位置相对视频内容稳定。
+* DPR 或窗口尺寸变化不会导致明显偏移。
+
+---
+
+## 12. 视觉安全与声明边界
+
+M1 必须遵守：
+
+1. 不使用全屏闪烁。
+2. 不使用硬 0-100% 方波闪烁。
+3. 默认只使用小范围局部目标。
+4. 默认使用平滑透明度调制。
+5. 不对外宣称治疗效果。
+6. 不宣称临床级 SSVEP 时序准确性。
+7. 正式实验前需要外部设备验证实际刺激频率。
+8. 应提供一键停止或退出训练的路径。
+
+---
+
+## 13. 团队模块边界
+
+### 同学 A：视频资源与 AI 美术
+
+![1780379434276](image/spec/1780379434276.png)
+
+可以修改：
+
+* `public/levels/**/videos/`
+* `public/levels/**/review/`
+* `asset-notes.md`
+
+不得修改：
+
+* 关卡控制器逻辑。
+* NeuroFrame schema。
+* WebGL 时序代码。
+
+### 同学 B：WebGL SSVEP 叠加层
+
+![1780379446135](image/spec/1780379446135.png)
+
+可以修改：
+
+* `src/overlay/`
+* overlay 相关测试。
+
+不得修改：
+
+* BCI adapter 的数据解释。
+* L1 状态机规则。
+* 视频资源内容。
+
+### 同学 C：运行时与关卡控制器
+
+![1780379463773](image/spec/1780379463773.png)
+
+可以修改：
+
+* `src/runtime/`
+* `src/levels/`
+* 状态机测试。
+
+不得修改：
+
+* Three.js 底层渲染细节。
+* bridge 原始数据协议。
+
+### 同学 D：BCI 适配器、Tauri、遥测、验证
+
+![1780379476037](image/spec/1780379476037.png)
+
+可以修改：
+
+* `src/bci/`
+* `src/telemetry/`
+* `src-tauri/`
+* 验证脚本。
+
+不得修改：
+
+* L1 视觉规则。
+* WebGL 刺激数学公式，除非经过团队审查。
+
+---
+
+## 14. 第一周硬门槛
+
+第一周结束时，只有满足以下条件，才允许进入 L2/L3：
+
+1. L1 可以连续运行 5 分钟。
+2. 模拟注意力可以稳定触发开合状态。
+3. 信号丢失不会导致 `bloomProgress` 下降。
+4. 调试遮罩在窗口缩放后仍能对齐花心。
+5. telemetry 能还原完整会话过程。
+6. WebGL 目标在视频暂停时仍独立渲染。
+7. 缺失资源能显示明确错误。
+8. `npm run build` 或等价构建命令通过。
+
+若任一条件不满足，第二周继续稳定 L1，不进入 L2-L6 完整开发。
+
+---
+
+## 15. 暂不解决的问题
+
+以下问题不阻塞 M1，但必须记录：
+
+1. 真实 HybridBCI 输出字段尚未最终确定。
+2. bridge-server 的认证、token 和连接重试策略暂不作为 M1 核心验收。
+3. 临床级 SSVEP 时序验证不属于 M1。
+4. 移动端部署不属于 M1。
+5. L2-L6 的美术资源最终效果不属于 M1。
+6. 长期 EEG 历史数据存储不属于 M1。
+
+---
+
+## 16. 推荐首批文件
+
+M1 开始前，先创建以下文件：
+
+```text
+web-prototype/src/runtime/NeuroFrame.ts
+web-prototype/src/runtime/LevelController.ts
+web-prototype/src/runtime/TelemetryEvents.ts
+web-prototype/src/levels/l1/L1Controller.ts
+web-prototype/src/levels/l1/L1StateMachine.test.ts
+web-prototype/src/video/VideoEnvironmentController.ts
+web-prototype/src/overlay/SSVEPOverlay.ts
+web-prototype/src/bci/MockNeuroSource.ts
+web-prototype/src/bci/BridgeNeuroSource.ts
+web-prototype/public/levels/l1/level.json
+web-prototype/public/levels/l1/asset-notes.md
+```
+
+
+# 附录：名词解释与开发工具
+
+
+![1780379721425](image/spec/1780379721425.png)
+
+![1780380034736](image/spec/1780380034736.png)
