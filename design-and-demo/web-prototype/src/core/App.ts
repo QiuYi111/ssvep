@@ -2,6 +2,7 @@ import { defaultState, LEVEL_DETAILS } from './types';
 import type { AppState } from './types';
 import { safeDt } from './Timing';
 import { MarkdownRenderer } from '../utils/MarkdownRenderer';
+import { mountL1Runtime, type L1RuntimeHandle } from '../l1-runtime/L1Runtime';
 
 export class App {
   private state: AppState;
@@ -12,6 +13,8 @@ export class App {
   private sidebarEl: HTMLElement;
   private videoEl: HTMLVideoElement | null = null;
   private timerEl: HTMLElement | null = null;
+  private l1Runtime: L1RuntimeHandle | null = null;
+  private l1RuntimeMountId = 0;
 
   constructor() {
     this.state = defaultState();
@@ -49,6 +52,11 @@ export class App {
   }
 
   private renderUI(): void {
+    const shouldKeepL1Runtime = this.state.currentView === 'training' && this.state.activeLevelIndex === 0;
+    if (!shouldKeepL1Runtime) {
+      this.stopL1Runtime();
+    }
+
     // Update sidebar active state
     this.sidebarEl.querySelectorAll('.nav-item').forEach(item => {
       const i = item as HTMLElement;
@@ -96,6 +104,12 @@ export class App {
   private renderTraining(): void {
     const isCalibrate = this.state.activeLevelIndex === -1;
     const levelIdx = this.state.activeLevelIndex;
+
+    if (!isCalibrate && levelIdx === 0) {
+      this.renderHybridL1Training();
+      return;
+    }
+
     const level = isCalibrate ? { title: '标定', target: '请凝视中心光点', advice: '放松双眼 · 保持稳定注视' } : LEVEL_DETAILS[levelIdx];
     const videoSrc = isCalibrate ? 'videos/calibrate.mp4' : `videos/l${levelIdx + 1}.mp4`;
     const layoutClass = isCalibrate ? 'layout-calibrate' : `layout-l${levelIdx + 1}`;
@@ -139,6 +153,78 @@ export class App {
 
     this.lastTime = performance.now();
     if (this.animId) cancelAnimationFrame(this.animId);
+    this.tick(this.lastTime);
+  }
+
+  private renderHybridL1Training(): void {
+    this.stopL1Runtime();
+    if (this.animId) cancelAnimationFrame(this.animId);
+
+    const level = LEVEL_DETAILS[0];
+    this.mainEl.innerHTML = `
+      <div class="training-view layout-l1 hybrid-l1-training">
+        <div id="l1-runtime-stage" class="l1-runtime-stage"></div>
+
+        <div class="training-ui-top-left">
+          <div class="glass-capsule status-tag">
+            <span id="status-text">${level.title} 训练中</span>
+          </div>
+          <div class="training-instruction" id="instruction-text">${level.target}</div>
+        </div>
+
+        <div class="training-ui-top-right">
+          <div class="glass-capsule timer-tag" id="timer-text">00:00</div>
+          <button class="glass-capsule icon-btn" id="btn-pause-training">
+            <div class="pause-icon"></div>
+          </button>
+        </div>
+
+        <div class="training-ui-bottom">
+          <div class="glass-capsule advice-tag">
+            <span id="advice-text">${level.advice}</span>
+          </div>
+        </div>
+      </div>
+    `;
+
+    this.videoEl = null;
+    this.timerEl = document.getElementById('timer-text')!;
+    this.state.time = 0;
+    this.state.paused = false;
+
+    const mountId = ++this.l1RuntimeMountId;
+    const stage = document.getElementById('l1-runtime-stage')!;
+    mountL1Runtime(stage, {
+      levelBasePath: new URL('levels/l1', document.baseURI).toString(),
+      mode: 'developer',
+    }).then((runtime) => {
+      if (
+        mountId !== this.l1RuntimeMountId ||
+        this.state.currentView !== 'training' ||
+        this.state.activeLevelIndex !== 0
+      ) {
+        runtime.stop();
+        return;
+      }
+      this.l1Runtime = runtime;
+      if (this.state.paused) {
+        runtime.pause();
+      }
+    }).catch((err: unknown) => {
+      stage.innerHTML = `
+        <div class="l1-runtime-error">
+          <strong>RuntimeError:</strong> ${String(err)}
+        </div>
+      `;
+    });
+
+    document.getElementById('btn-pause-training')?.addEventListener('click', () => {
+      this.state.paused = !this.state.paused;
+      if (this.state.paused) this.l1Runtime?.pause();
+      else this.l1Runtime?.resume();
+    });
+
+    this.lastTime = performance.now();
     this.tick(this.lastTime);
   }
 
@@ -307,5 +393,13 @@ export class App {
 
   start(): void {
     this.renderUI();
+  }
+
+  private stopL1Runtime(): void {
+    this.l1RuntimeMountId++;
+    if (this.l1Runtime) {
+      this.l1Runtime.stop();
+      this.l1Runtime = null;
+    }
   }
 }

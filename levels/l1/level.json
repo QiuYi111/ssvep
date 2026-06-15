@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "1.0",
+  "id": "l1",
+  "name": "涟漪绽放",
+  "videoSpec": {
+    "naturalWidth": 1920,
+    "naturalHeight": 1080,
+    "expectedFps": 24,
+    "objectFit": "contain",
+    "codec": "h264",
+    "container": "mp4"
+  },
+  "videos": {
+    "closedLoop": "videos/closed_loop.mp4",
+    "openingTransition": "videos/opening_transition.mp4",
+    "openLoop": "videos/open_loop.mp4",
+    "closingTransition": "videos/closing_transition.mp4"
+  },
+  "target": {
+    "x": 0.5677,
+    "y": 0.6555,
+    "radius": 0.035,
+    "frequencyHz": 15,
+    "color": "#ffe9a6",
+    "opacityMin": 0.6,
+    "opacityMax": 1.0,
+    "modulation": "smooth_sine"
+  },
+  "controller": {
+    "attentionHighThreshold": 0.65,
+    "attentionLowThreshold": 0.45,
+    "dwellTimeMs": 2000,
+    "bloomRisePerSecond": 0.25,
+    "bloomFallPerSecond": 0.20,
+    "signalLostTimeoutMs": 1000
+  },
+  "debug": {
+    "showMaskByDefault": false,
+    "showTelemetryByDefault": true
+  }
+}

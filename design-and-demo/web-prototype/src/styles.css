@@ -247,6 +247,33 @@ body {
   object-position: top;
 }
 
+.hybrid-l1-training {
+  min-height: calc(100vh - 80px);
+}
+
+.l1-runtime-stage {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background: #000;
+}
+
+.l1-runtime-host {
+  width: 100%;
+  height: 100%;
+}
+
+.l1-runtime-error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 24px;
+  color: #ff8a80;
+  font: 14px "SF Mono", "Roboto Mono", monospace;
+  background: #050505;
+}
+
 .training-ui-top-left {
   position: absolute;
   top: 32px;
