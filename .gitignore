@@ -35,3 +35,4 @@ Icon
 # Web build outputs
 web-prototype/dist/
 web-prototype/node_modules/
+hybrid_demo/
